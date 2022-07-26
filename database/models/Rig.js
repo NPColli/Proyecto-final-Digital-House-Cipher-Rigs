@@ -28,4 +28,6 @@ especificaciones: {
 
 }
 
+config = {timestamps: false};
+
 return Rigs;

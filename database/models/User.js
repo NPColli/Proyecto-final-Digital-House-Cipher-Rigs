@@ -28,4 +28,6 @@ contraseña: {
 
 }
 
+config = {timestamps: false};
+
 return Users;

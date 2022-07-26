@@ -27,5 +27,7 @@ cols = {
     }
     
     }
+    
+    config = {timestamps: false};
 
 return Asics;
