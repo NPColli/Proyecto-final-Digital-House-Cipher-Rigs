@@ -12,8 +12,8 @@ app.set("view engine", "ejs");
 const index = require('./src/routes/main');
 const nosotros = require('./src/routes/main');
 const contacto = require('./src/routes/main');
-const productos = require('./src/routes/main');
-const users = require('./src/routes/main');
+const productos = require('./src/routes/productos');
+const users = require('./src/routes/usuarios');
 
 app.use('/', index); //localhost3000
 app.use('/nosotros', nosotros); //localhost3000/nosotros

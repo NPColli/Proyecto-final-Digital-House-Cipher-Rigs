@@ -4,12 +4,15 @@ const fs=require('fs');
 const path= require('path');
 
 
+const db = require('../../database/models');
 
+const productosController = {
 
-const controller = {
-
-    asic: (req, res) => {
-        return res.render('./products/asic');
+    asiclist: (req, res) => {
+        db.Asic.findAll()
+        .then(function(Asic) {
+        res.render('./products/asic', {Asic:Asics})
+        })
     },
     rigs: (req, res) => {
         return res.render('./products/rigs');
@@ -21,23 +24,7 @@ const controller = {
         return res.render('./products/productEdit');
     },
     guardarProducto: (req,res) =>{
-   
-        
-        let products = JSON.parse(fs.readFileSync('./src/data/products.json', 'utf-8'));
-        
-        let newProducts = { 
-            id:randomUUID(),
-            imagen:req.body.imagen,
-            titulo:req.body.titulo,
-            precio:req.body.precio,
-            especificaciones:req.body.especificaciones,
-            funcion:req.body.funcion
-        }
-       products.push(newProducts);
-       products = JSON.stringify(products)
-         fs.appendFileSync('./src/data/products.json',newProducts,'utf-8')
-         res.render('./products/productDetail')
-         
+
         
     },
     detalle: (req, res) => {
@@ -46,7 +33,7 @@ const controller = {
  
 };
 
-module.exports = controller;
+module.exports = productosController;
 
 
  //products (GET)

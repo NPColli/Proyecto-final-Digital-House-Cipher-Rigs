@@ -1,12 +1,8 @@
-const { DataTypes } = require("sequelize/types");
+const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
 
-const Users = sequelize.define("User", cols, config) 
-
-}
-
-cols = {
+const User = sequelize.define("User", {
 user_id: {
     autoIncrement: true,
     primaryKey: true,
@@ -26,8 +22,13 @@ contraseña: {
     type: DataTypes.STRING
 }
 
+} ,
+
+{
+timestamps: false
+
+});
+
+return User;
+
 }
-
-config = {timestamps: false};
-
-return Users;

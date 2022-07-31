@@ -1,12 +1,8 @@
-const { DataTypes } = require("sequelize/types");
 
 module.exports = (sequelize, DataTypes) => {
 
-const Asics = sequelize.define("Asic", cols, config) 
+const Asic = sequelize.define("Asics",{
 
-}
-
-cols = {
     id_asic: {
         autoIncrement: true,
         primaryKey: true,
@@ -26,8 +22,11 @@ cols = {
         type: DataTypes.STRING
     }
     
-    }
-    
-    config = {timestamps: false};
+    },
+    {
+ timestamps: false,
+});
 
-return Asics;
+return Asic;
+
+}
