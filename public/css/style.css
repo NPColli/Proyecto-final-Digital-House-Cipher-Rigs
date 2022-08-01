@@ -46,7 +46,7 @@ align-content: flex-start;
 
 }
 
-#menuToggle
+.menuToggle
 {
 display: block;
 position:absolute;
@@ -60,7 +60,7 @@ z-index: 1;
 user-select: none;
 }
 
-#menuToggle a
+.menuToggle a
 {
 text-decoration: none;
 color: #ffffff;
@@ -68,13 +68,13 @@ color: #ffffff;
 transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
+.menuToggle a:hover
 {
 color: rgb(159, 159, 159);
 }
 
 
-#menuToggle input
+.menuToggle input
 {
 display: block;
 width: 40px;
@@ -91,7 +91,7 @@ z-index: 2; /* and place it over the hamburger */
 -webkit-touch-callout: none;
 }
 
-#menuToggle span
+.menuToggle span
 {
 display: block;
 width: 33px;
@@ -110,20 +110,20 @@ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+.menuToggle span:first-child
 {
 transform-origin: 0% 0%;
 
 
 }
 
-#menuToggle span:nth-last-child(2)
+.menuToggle span:nth-last-child(2)
 {
 transform-origin: 0% 100%;
 
 }
 
-#menuToggle input:checked ~ span
+.menuToggle input:checked ~ span
 {
 opacity: 1;
 transform: rotate(45deg) translate(-2px, -1px);
@@ -131,18 +131,18 @@ background: #fafafa;
 
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
+.menuToggle input:checked ~ span:nth-last-child(3)
 {
 opacity: 0;
 transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
+.menuToggle input:checked ~ span:nth-last-child(2)
 {
 transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu
+.menu
 {
 position: absolute;
 width: 300px;
@@ -161,7 +161,7 @@ transform: translate(100%, 0);
 transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
+.menu li
 {
 padding: 10px 0;
 font-size: 18px;
@@ -175,15 +175,7 @@ margin-right: 2%;
 }
 
 
-input{
-background-color:rgba(68,62,60,0.5);
-color: white;
-}
-label{
-text-align: left;
-}
-
-#menuToggle input:checked ~ ul
+.menuToggle input:checked ~ ul
 {
 transform: none;
 }
@@ -204,12 +196,15 @@ body {
   font-family: Didact Gothic;
 }
 
-/* Login Styles */
-main {
+.main {
   width: 100%;
 }
 
+/* Login y Register Styles */
+
 .control {
+  font-size: 18px;
+  text-align: center;
   height: 35px;
   width: 400px;
   border-radius: 20px;
@@ -243,15 +238,6 @@ main {
   margin-top: 40px
 }
 
-h1 {
-  text-align: center;
-  color: white;
-  margin-top: 10px;
-  padding-top: 50px;
-  padding-bottom: 20px;
-
-}
-
 .formulario {
   width: 100%;
   display: flex;
@@ -259,59 +245,76 @@ h1 {
   align-items: center;
 }
 
-a {
+.form1 {
   color: white;
   text-decoration: none;
   text-align: center;
   padding-left: 0px;
 }
 
-input {
-  background-color: rgba(68, 62, 60, 0.5);
-  color: white;
-  font-size: 16px;
+.h1form {
   text-align: center;
+  color: white;
+  margin-top: 10px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
-label {
-
+.labelForm {
   color: white;
   padding-bottom: 10px;
   padding-top: 10px;
   font-size: 20px;
 }
 
-@media(max-width:480px) {
-  h1 {
-    padding-top: 30px;
-    padding-bottom: 0;
-  }
-  h2{
-    display: none;
-  }
-  .control {
-    margin:0;
-    width: 80vw;
-    border-radius: 20px;
-    color: white;
-    background-color: rgba(67, 63, 62, 0.9);
-  }
-}
-/* Register Styles */
-h2{
+.rapid{
   text-align: center;
   color:white;
   padding-top: 10px;
   margin-bottom: 50px;
   margin-top: 0px;
 }
-input{
-  background-color:rgba(68,62,60,0.5);
+
+/* ProductCart Styles */
+
+.carrito {
   color: white;
-  font-size: 18px;
-  text-align: center;
 }
+
+.articulos {
+  display: flex;
+  justify-content: space-around 
+}
+
+.total {
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  position: relative;
+  right: 5%;
+}
+
+.total1 {
+  position: relative;
+  right: 2%;
+}
+
+.cantidades {
+  width: 8%;
+  height: 10%;
+  background-color: rgba(67, 63, 62, 0.9);
+  color: white;
+}
+
+.comprar {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 50px;
+}
+
 /*PorductEdit Styles*/
+
 .control1{
   margin:0;
   border-radius: 10px;
@@ -320,31 +323,12 @@ input{
   height: 10vh;
 }
 
-/* Media Queris */
-@media screen and (max-width: 900px) {
-  .desktopnav {
-    display: none;
-  }
-
-  .logo {
-    width: 100px
-  }
+.control2{
+  background-color:rgba(68,62,60,0.5);
+  color: white;
+  font-size: 18px;
+  text-align: center;
 }
-
-@media screen and (min-width: 901px) {
-  #menuToggle {
-    display: none
-  }
-
-  ;
-
-  #menu {
-    display: none
-  }
-
-  ;
-}
-
 
 .descripcion {
   display: flex;
@@ -387,10 +371,6 @@ input{
   justify-content: center;
 }
 
-img {
-  max-height: 100%;
-  max-width: 100%;
-}
 
 .imagenProducto {
   height: 30%;
@@ -460,4 +440,26 @@ img {
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+
+/* Media Queris */
+@media (max-width: 481px) {
+  .desktopnav {
+    display: none;
+  };
+
+  .logo {
+    width: 100px
+  }
+}
+
+@media (min-width: 480px) {
+  .menuToggle {
+    display: none
+  };
+
+  .menu {
+    display: none
+  }
 }

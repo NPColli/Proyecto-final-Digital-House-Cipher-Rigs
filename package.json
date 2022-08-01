@@ -8,18 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreabarrandeguy/grupo_1_CipherRigs.git"
+    "url": "git+https://github.com/albruno-dev/-grupo_1_CipherRigs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andreabarrandeguy/grupo_1_CipherRigs/issues"
+    "url": "https://github.com/albruno-dev/-grupo_1_CipherRigs/issues"
   },
-  "homepage": "https://github.com/andreabarrandeguy/grupo_1_CipherRigs#readme",
+  "homepage": "https://github.com/albruno-dev/-grupo_1_CipherRigs#readme",
   "dependencies": {
     "ejs": "^3.1.7",
     "express": "^4.17.3",
-    "nodemon": "^2.0.15"
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^5.22.5"
   }
 }
