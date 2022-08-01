@@ -12,20 +12,24 @@ app.set("view engine", "ejs");
 const index = require('./src/routes/main');
 const nosotros = require('./src/routes/main');
 const contacto = require('./src/routes/main');
-const productos = require('./src/routes/main');
-const users = require('./src/routes/main');
+const asic = require('./src/routes/asics');
+const rig = require('./src/routes/rigs');
+const user = require('./src/routes/usuarios');
 
 app.use('/', index); //localhost3000
 app.use('/nosotros', nosotros); //localhost3000/nosotros
 app.use('/contacto', contacto); //localhost3000/contacto
 
-app.use('/productos', productos); //localhost3000/productos
-app.use('/carrito', productos); //localhost3000/carrito
-app.use('/asic', productos); //localhost3000/asic
-app.use('/rigs', productos); //localhost3000/rigs
+app.use('/productos', asic); //localhost3000/productos
+app.use('/carrito', asic); //localhost3000/carrito
+app.use('/asic', asic); //localhost3000/asic
+app.use('/asic/crear', asic); //localhost3000/asic
 
-app.use('/login', users); //localhost3000/loguearse
-app.use('/register', users); //localhost3000/register
+app.use('/rigs', rig); //localhost3000/rigs
+app.use('/rigs/crear', rig); //localhost3000/rigs
+
+app.use('/login', user); //localhost3000/loguearse
+app.use('/login/register', user); //localhost3000/register
 
 app.use((req,res,next)=>{
     res.status(404).render('not-found')

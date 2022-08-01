@@ -15,7 +15,17 @@
   <%- include ('../partials/header') %>
 
   <main>
-
+    <h1>Listado de RIGS</h1>
+    <ul>
+      <% for (let i = 0; i < rigs.length; i++) { %>
+        <li>
+          <a href="/rig/<%=rigs[i].id_rigs%>">
+          <%=rigs[i].image %>
+          <%=rigs[i].titulo %>
+        </a>
+        </li>
+     <% } %>
+    </ul>
   </main>
   <footer>
 
