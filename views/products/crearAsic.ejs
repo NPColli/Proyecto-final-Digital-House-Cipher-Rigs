@@ -15,9 +15,9 @@
 
     <%- include ('../partials/header') %>
 
-    <h1>Vender</h1>
+    <h1>Crear Asic</h1>
 
-    <form action="/guardar" method="POST" class="formulario">
+    <form action="/asic/crear" method="POST" class="formulario">
         <label for="">Imagen</label>
         <input type="file" name="imagen" accept=".png,.jpg" >
 
@@ -28,12 +28,8 @@
         <input type="text" name="precio" placeholder="$" class="control">
 
         <label for="especificaciones">Especificaciones</label>
-        <textarea name="especificaciones" class="control control1"></textarea>
+        <textarea name="especificaciones" class="control control1"></textarea>>
 
-        <label for="funcion">Función</label>
-        <textarea name="funcion" class="control control1"></textarea>
-
-        
 
         <button type="submit" class="botons2">Publicar</button>
     </form>

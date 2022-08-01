@@ -15,12 +15,15 @@
   </style>
   <%- include ('../partials/header') %>
   <main>
-<h1>ASICS</h1>
+<h1>Listado de ASIC</h1>
 <ul>
-  <% for (let i = 0, i < Asic.length; i++) { %>
-<li>
-  <%=Asic[i].titulo%>
-</li>
+  <% for (let i = 0; i < asics.length; i++) { %>
+    <li>
+      <a href="/asic/<%=asics[i].id_asic%>">
+      <%=asics[i].image %>
+      <%=asics[i].titulo %>
+    </a>
+    </li>
  <% } %>
 </ul>
   </main>

@@ -1,10 +1,12 @@
-const controller = {
-    login: (req, res) => {
+let db = require("../../database/models");
+
+let usuariosController = {
+    login: function (req, res) {
         return res.render('./users/login');
     },
-    register: (req, res) => {
-        return res.render('./users/register');
+    register: function (req, res) {
+        return res.render('./users/register')
     }
 };
 
-module.exports = controller;
+module.exports = usuariosController;

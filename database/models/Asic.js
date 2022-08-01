@@ -1,13 +1,12 @@
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = function (sequelize, DataTypes){
+    let alias = "Asic";
 
-const Asic = sequelize.define("Asics",{
-
-    id_asic: {
+    let cols = { 
+        id_asic: {
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER
-    
     },
     image:{
         type: DataTypes.BLOB
@@ -22,11 +21,14 @@ const Asic = sequelize.define("Asics",{
         type: DataTypes.STRING
     }
     
-    },
-    {
- timestamps: false,
-});
+    }
 
-return Asic;
+    let config = {
+        tableName: "asics",
+        timestamps: false
+    }
 
+    let Asic = sequelize.define(alias, cols, config);
+
+    return Asic;
 }

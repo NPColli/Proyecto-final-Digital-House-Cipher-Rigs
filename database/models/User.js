@@ -1,8 +1,7 @@
-const { DataTypes } = require("sequelize");
+module.exports = function (sequelize, DataTypes){
+    let alias = "User";
 
-module.exports = (sequelize, DataTypes) => {
-
-const User = sequelize.define("User", {
+    let cols = {
 user_id: {
     autoIncrement: true,
     primaryKey: true,
@@ -20,14 +19,14 @@ apellido:{
 } ,
 contraseña: {
     type: DataTypes.STRING
+},
+    }
+let config = {
+    tableName: "users",
+    timestamps: false
 }
 
-} ,
-
-{
-timestamps: false
-
-});
+let User = sequelize.define(alias, cols, config);
 
 return User;
 
