@@ -15,21 +15,21 @@
   </style>
   <%- include ('../partials/header') %>
   </nav>
-  <main>
-    <h1>Crea Tu cuenta</h1>
-    <h2>Es rápido y fácil</h2>
+  <main class="main">
+    <h1 class="h1form">Crea Tu cuenta</h1>
+    <h2 class="rapid">Es rápido y fácil</h2>
     <form action="login/register" method="POST" class="formulario">
-      <label>Nombre</label>
+      <label class="labelForm">Nombre</label>
       <input type="text" class="control" name="nombre" placeholder="Ingrese su Nombre">
-      <label>Apellido</label>
+      <label class="labelForm">Apellido</label>
       <input type="text" class="control" name="apellido" placeholder="Ingrese su Apellido">
-      <label>Email</label>
+      <label class="labelForm">Email</label>
       <input type="email" class="control" name="email" placeholder="Ingrese su Email">
-      <label>Contraseña</label>
+      <label class="labelForm">Contraseña</label>
       <input type="password" class="control" name="contraseña" placeholder="Ingrese su Constraseña">
       <div><button type="submit" class="botons2" >Crear Cuenta</button>
         <p class="parrafo">o</p>
-        <button class="botons1" type="submit"><a href="login">Ingresar</a></button>
+        <button class="botons1" type="submit"><a class="form1" href="login">Ingresar</a></button>
       </div>
 
     </form>

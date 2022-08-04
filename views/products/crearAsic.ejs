@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Product Create</title>
-    <%- include('../partials/head') %>
+  <title>Product Create</title>
+  <%- include('../partials/head') %>
 </head>
 
 <body>
@@ -15,19 +15,19 @@
 
     <%- include ('../partials/header') %>
 
-    <h1>Crear Asic</h1>
+    <h1 class="h1form">Crear Asic</h1>
 
     <form action="/asic/crear" method="POST" class="formulario">
-        <label for="">Imagen</label>
-        <input type="file" name="imagen" accept=".png,.jpg" >
+        <label class="labelForm" for="">Imagen</label>
+        <input type="file" name="imagen" accept=".png,.jpg" class="control2">
 
-        <label for="titulo">Titulo</label>
+        <label class="labelForm" for="titulo">Titulo</label>
         <input type="text" name="titulo" placeholder="Titulo" class="control">
 
-        <label for="precio">Precio</label>
+        <label class="labelForm" for="precio">Precio</label>
         <input type="text" name="precio" placeholder="$" class="control">
 
-        <label for="especificaciones">Especificaciones</label>
+        <label class="labelForm" for="especificaciones">Especificaciones</label>
         <textarea name="especificaciones" class="control control1"></textarea>>
 
 
