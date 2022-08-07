@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Contacto</title>
@@ -7,18 +7,36 @@
 </head>
 
 <body>
-  <style>
-    body {
-      background-image: url('img/Back\ -\ home.jpg');
-    }
-  </style>
-  <%- include ('./partials/header') %>
-  <main>
+    <style>
 
-  </main>
-  <footer>
+    </style>
 
-  </footer>
+    <%- include ('./partials/header') %>
+    <main>
+      <video class="video" preload="auto" autoplay loop muted>
+        <source src="img/contact.mp4" type="video/mp4">
+        <source src="img/contact.mp4" type="video/webm">
+        <source src="img/contact.mp4" type="video/ogg">
+    </video>
+    <h1 class="h1form">Contáctenos</h1>
+
+    <form action="/" method="POST" class="formulario">
+
+        <label class="labelForm" for="nombre">Nombre</label>
+        <input type="text" name="titulo" placeholder="Nombre" class="control" required>
+
+        <label class="labelForm" for="email">E-mail</label>
+        <input type="email" name="email" placeholder="Ingrese su dirección de Email" class="control" required>
+
+        <label class="labelForm" for="asunto">Asunto</label>
+        <input type="text" name="asunto" placeholder="Asunto" class="control">
+
+        <label class="labelForm" for="mensaje">Mensaje</label>
+        <textarea name="mensaje" placeholder="Mensaje" class="control control1" required></textarea>>
+
+        <button type="submit" class="botons2">Enviar</button>
+    </form>
+    </main>
 </body>
 
 </html>
