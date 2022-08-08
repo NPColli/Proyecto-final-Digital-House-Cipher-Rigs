@@ -19,7 +19,6 @@
 }
 
 .form1 {
-  color: white;
   text-decoration: none;
   text-align: center;
   padding-left: 0px;
@@ -209,41 +208,45 @@ body {
   height: 35px;
   width: 400px;
   border-radius: 20px;
-  color: white;
   background-color: rgba(67, 63, 62, 0.9)
-}
-
-.botons1 {
-  width: 200px;
-  border-radius: 20px;
-  height: 35px;
-  color: white;
-  background-color: rgba(67, 63, 62, 0.9);
 }
 
 .parrafo {
   font-size: 20px;
-  color: white;
   text-align: center;
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
-.botons2 {
-  width: 200px;
+.buttons {
   color: white;
+  width: 200px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   height: 35px;
   background-color: rgba(0, 0, 0, 0.8);
-  margin-top: 40px
 }
-.botons2:hover{
-  background-color: rgb(177, 54, 54);
-  color: blue;
+.buttons:hover{
+  background-color: rgb(201, 201, 201);
+  color: black;
+  font-weight: bold;
   transition:
 	background-color, 0.3s,
   color, 0.3s
+}
+
+.pass{
+  text-decoration: none;
+  color: blue;
+}
+
+.buttonCuenta{
+  text-decoration: none;
+  color: blue;
+}
+
+.pass:hover{
+  color: white;
 }
 
 .formulario {
@@ -255,14 +258,12 @@ body {
 
 .h1form {
   text-align: center;
-  color: white;
   margin-top: 10px;
   padding-top: 50px;
   padding-bottom: 20px;
 }
 
 .labelForm {
-  color: white;
   padding-bottom: 10px;
   padding-top: 10px;
   font-size: 20px;
@@ -270,17 +271,12 @@ body {
 
 .rapid{
   text-align: center;
-  color:white;
   padding-top: 10px;
   margin-bottom: 50px;
   margin-top: 0px;
 }
 
 /* ProductCart Styles */
-
-.carrito {
-  color: white;
-}
 
 .articulos {
   display: flex;
@@ -289,7 +285,6 @@ body {
 
 .total {
   display: flex;
-  color: white;
   justify-content: flex-end;
   position: relative;
   right: 5%;
@@ -304,7 +299,6 @@ body {
   width: 8%;
   height: 10%;
   background-color: rgba(67, 63, 62, 0.9);
-  color: white;
 }
 
 .comprar {
@@ -319,14 +313,12 @@ body {
 .control1{
   margin:0;
   border-radius: 10px;
-  color: white;
   background-color: rgba(67, 63, 62, 0.9);
   height: 10vh;
 }
 
 .control2{
   background-color:rgba(68,62,60,0.5);
-  color: white;
   font-size: 18px;
   text-align: center;
 }
@@ -335,7 +327,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Didact Gothic;
-  color: white;
   font-size: 14px;
   margin-bottom: 140px;
 
@@ -344,7 +335,6 @@ body {
 
 .Productos {
   font-family: Didact Gothic;
-  color: white;
   font-size: medium;
   margin-bottom: 20%;
   height: 30%;
@@ -439,7 +429,6 @@ body {
 }
 
 .altus{
-  color: white;
   display: flex;
   flex-direction: column; 
   align-items: center;
