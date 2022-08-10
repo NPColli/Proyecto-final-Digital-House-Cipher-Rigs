@@ -4,58 +4,205 @@
 <head>
   <title>Home</title>
   <%- include('./partials/head') %>
+  
 </head>
 
 <body>
   <style>
   </style>
   <%- include ('./partials/header') %>
-
+ 
   <main>
     <video class="video" preload="auto" autoplay loop muted>
       <source src="img/home.mp4" type="video/mp4">
-      <source src="img/home.mp4" type="video/webm">
+      <source src="img/home.mp4" btnvertype="video/webm">
       <source src="img/home.mp4" type="video/ogg">
   </video>
-    <div class="Productos">
-      <br>
-      <p class="article">Bitcoin Miner S9j Pro</p>
-      <br></br>
-      <p>El minero bitcoin más potente del mundo hasta ahora. Antminer S19 Pro es un equipo de minería de algoritmo
-        SHA-256 fabricado por Bitmain.</p>
+  <div class="bodyslider">
+    <div class="container">
+      <div class="slide active" style="background-image: url('img/Products/antspace.JPG');">
+          <h3>Ant Space</h3>
+      </div>
+      <div class="slide active" style="background-image: url('img/Products/miners19.JPG');">
+          <h3>Miner S19</h3>
+      </div>
+      <div class="slide active" style="background-image: url('img/Products/s19xp.webp');">
+          <h3>S19 XP</h3>
+      </div>
+     <div class="slide active" style="background-image: url('img/Products/minerl7.JPG');">
+          <h3>Miner L7</h3>
+      </div>
     </div>
-    <div class="imagenProducto">
-
-      <img class="miner" src="img/Products/Bitcoin Miner S19 XP.png" alt="La imagen no pudo cargar correctamente">
-    </div>
+</div>
     <br>
-    <br>
-    </div>
-    </div>
-    <div class="barraProductos">
-      <div class="flechaIzqProductos">
-        <img src="img/Flecha Left.png">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="img/Products/Bitcoin Miner S19.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="img/Products/Bitcoin Miner S19 Pro.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="img/Products/Bitcoin Miner S19 XP.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="img/Products/Bitcoin Miner S19 Pro+ Hyd..png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="flechaDerProductos">
-        <img src="img/Flecha Right.png">
-      </div>
+</br>
+<h2>Más vendidos</h2>
+<br>
+</br>
+  <section class="product"> 
+    <button class="pre-btn"><img src="img/flecha.svg" alt=""></button>
+    <button class="nxt-btn"><img src="img/flecha.svg" alt=""></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="img/Products/Bitcoin Miner S19 Pro.png" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Bitmain S19 Pro</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+    
+                <img src="img/Products/bitmain hydro.png" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Bitmain S19 Pro+ Hyd</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+        
+                <img src="img/Products/Bitcoin Miner S19 XP.png" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Bitmain S19 XP</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+        
+                <img src="img/Products/Bitcoin Miner S19 XP.png" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Bitcoin Miner S19</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+        
+                <img src="img/Products/Bitcoin Miner S19.png" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
 
-  </main>
+                <img src="images/card6.jpg" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/card7.jpg" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+
+                <img src="images/card8.jpg" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+
+                <img src="images/card9.jpg" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/card10.jpg" class="product-thumb" alt="">
+                <button class="card-btn">Ver más</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span>
+            </div>
+        </div>
+    </div>
+
+    </main> 
+
   <footer>
+    
+    <%- include('./partials/footer') %>
+    
+  <script>
+    const slides = document.querySelectorAll('.slide');
+for (const slide of slides){
+    slide.addEventListener('click', ()=> {
+        clearActiveClasses();
+        slide.classList.add('active')
+    })
+}
 
-  </footer>
+function clearActiveClasses(){
+    slides.forEach( (slide)=> {
+        slide.classList.remove('active')
+
+    })
+}
+  </script>
+  <script>
+    const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+  </script>
+</footer>
 </body>
 
 </html>
