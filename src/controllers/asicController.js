@@ -25,7 +25,11 @@ listado: function (req, res){
     .then(function(asics) {
 res.render('./products/asic', {asics:asics})
             })
-}
+},
+
+detalle: (req, res) => {
+    return res.render('./products/productDetail');
+} ,
 }
 
 module.exports = asicController;

@@ -24,7 +24,11 @@ listado: function (req, res){
     .then(function(rigs) {
 res.render('./products/rigs', {rigs:rigs})
             })
-}
+},
+
+detalle: (req, res) => {
+    return res.render('./products/productDetail');
+} ,
 }
 
 module.exports = rigController;

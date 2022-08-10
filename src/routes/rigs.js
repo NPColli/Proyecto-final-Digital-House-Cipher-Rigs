@@ -10,4 +10,6 @@ route.post('/crear', rigController.guardado);
 //Lectura
 route.get('', rigController.listado);
 
+route.get('/detalle',rigController.detalle);
+
 module.exports = route;

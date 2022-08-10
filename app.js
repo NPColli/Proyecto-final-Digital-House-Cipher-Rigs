@@ -15,13 +15,14 @@ const contacto = require('./src/routes/main');
 const asic = require('./src/routes/asics');
 const rig = require('./src/routes/rigs');
 const user = require('./src/routes/usuarios');
+const carrito = require('./src/routes/carrito');
 
 app.use('/', index); //localhost3000
 app.use('/nosotros', nosotros); //localhost3000/nosotros
 app.use('/contacto', contacto); //localhost3000/contacto
 
 app.use('/productos', asic); //localhost3000/productos
-app.use('/carrito', asic); //localhost3000/carrito
+app.use('/carrito', carrito); //localhost3000/carrito
 app.use('/asic', asic); //localhost3000/asic
 app.use('/asic/crear', asic); //localhost3000/asic
 

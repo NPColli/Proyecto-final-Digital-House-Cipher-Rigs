@@ -10,5 +10,7 @@ route.post('/crear', asicController.guardado);
 //Lectura
 route.get('', asicController.listado);
 
+route.get('/detalle',asicController.detalle);
+
 
 module.exports = route;
