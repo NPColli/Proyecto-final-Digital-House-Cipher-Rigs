@@ -26,15 +26,18 @@
         <input type="text" name="titulo" placeholder="Nombre" class="control" required>
 
         <label class="labelForm" for="email">E-mail</label>
-        <input type="email" name="email" placeholder="Ingrese su dirección de Email" class="control" required>
+        <input type="email" name="email" placeholder="Ingrese su dirección de E-mail" class="control" required>
 
         <label class="labelForm" for="asunto">Asunto</label>
         <input type="text" name="asunto" placeholder="Asunto" class="control">
 
         <label class="labelForm" for="mensaje">Mensaje</label>
-        <textarea name="mensaje" placeholder="Mensaje" class="control control1" required></textarea>>
+        <textarea name="mensaje" placeholder="Ingrese el motivo de su consulta" class="control control1" required></textarea>
 
-        <button type="submit" class="botons2">Enviar</button>
+        <label class="labelForm" for="mensaje">Puede ingresar imagenes si lo desea</label>
+        <input type="file" name="imagenesConsulta" accept=".jpg" multiple>
+        <br>
+        <button type="submit" class="buttons">Enviar</button>
     </form>
     </main>
     <footer>

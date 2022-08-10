@@ -182,11 +182,7 @@ padding-top: 2px;
 transform: none;
 }
 
-
-
-/* Media Queris */
-
-@media (max-width: 992px) {
+@media only screen and (max-width: 599px) {
   .desktopnav {
     display: none;
   };
@@ -196,7 +192,7 @@ transform: none;
   }
 }
 
-@media (min-width: 993px) {
+@media only screen and (min-width: 600px) {
   .menuToggle {
     display: none
   };
@@ -221,6 +217,7 @@ body {
   width: 100%;
   margin: 0%;
   font-family: Didact Gothic;
+  color: white;
 }
 
 .main {
@@ -237,34 +234,45 @@ body {
   height: 35px;
   width: 400px;
   border-radius: 20px;
-  color: white;
   background-color: rgba(67, 63, 62, 0.9)
-}
-
-.botons1 {
-  width: 200px;
-  border-radius: 20px;
-  height: 35px;
-  color: white;
-  background-color: rgba(67, 63, 62, 0.9);
 }
 
 .parrafo {
   font-size: 20px;
-  color: white;
   text-align: center;
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
-.botons2 {
-  width: 200px;
+.buttons {
   color: white;
+  width: 200px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   height: 35px;
   background-color: rgba(0, 0, 0, 0.8);
-  margin-top: 40px
+}
+.buttons:hover{
+  background-color: rgb(201, 201, 201);
+  color: black;
+  font-weight: bold;
+  transition:
+	background-color, 0.3s,
+  color, 0.3s
+}
+
+.pass{
+  text-decoration: none;
+  color: blue;
+}
+
+.buttonCuenta{
+  text-decoration: none;
+  color: blue;
+}
+
+.pass:hover{
+  color: white;
 }
 
 .formulario {
@@ -276,14 +284,12 @@ body {
 
 .h1form {
   text-align: center;
-  color: white;
   margin-top: 10px;
   padding-top: 50px;
   padding-bottom: 20px;
 }
 
 .labelForm {
-  color: white;
   padding-bottom: 10px;
   padding-top: 10px;
   font-size: 20px;
@@ -291,17 +297,12 @@ body {
 
 .rapid{
   text-align: center;
-  color:white;
   padding-top: 10px;
   margin-bottom: 50px;
   margin-top: 0px;
 }
 
 /* ProductCart Styles */
-
-.carrito {
-  color: white;
-}
 
 .articulos {
   display: flex;
@@ -310,7 +311,6 @@ body {
 
 .total {
   display: flex;
-  color: white;
   justify-content: flex-end;
   position: relative;
   right: 5%;
@@ -325,7 +325,6 @@ body {
   width: 8%;
   height: 10%;
   background-color: rgba(67, 63, 62, 0.9);
-  color: white;
 }
 
 .comprar {
@@ -340,14 +339,12 @@ body {
 .control1{
   margin:0;
   border-radius: 10px;
-  color: white;
   background-color: rgba(67, 63, 62, 0.9);
   height: 10vh;
 }
 
 .control2{
   background-color:rgba(68,62,60,0.5);
-  color: white;
   font-size: 18px;
   text-align: center;
 }
@@ -356,16 +353,12 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Didact Gothic;
-  color: white;
   font-size: 14px;
   margin-bottom: 140px;
-
-
 }
 
 .Productos {
   font-family: Didact Gothic;
-  color: white;
   font-size: medium;
   margin-bottom: 20%;
   height: 30%;
@@ -378,7 +371,6 @@ body {
   margin: auto;
   align-items: center;
   margin-top: 80px;
-  ;
 }
 
 .Productos .article {
@@ -405,9 +397,6 @@ body {
   justify-content: center;
   margin-left: 40%;
   margin-top: 5%;
-
-
-
 }
 
 .textoProductos {
@@ -421,8 +410,7 @@ body {
   color: #fff;
   border-radius: 50px;
   background-color: rgba(50, 50, 50, 0.5);
-  flex-wrap: wrap;
-
+  flex-wrap: wrap
 }
 
 .barraProductos {
@@ -433,7 +421,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 8%;
+  margin-top: 8%
 }
 
 .imagenesBarraProductos {
@@ -443,8 +431,7 @@ body {
   height: 150px;
   width: 300px;
   background-color: rgba(50, 50, 50, 0.705);
-  border-radius: 30px;
-
+  border-radius: 30px
 }
 
 
@@ -453,7 +440,7 @@ body {
   width: 50px;
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: center
 }
 
 .flechaDerProductos {
@@ -461,18 +448,10 @@ body {
   width: 50px;
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: center
 }
 
-.nosotros {
-  font-size: 14px;
-  color: white;
-  text-align: justify;
-  justify-content: center;
-
-}
 .altus{
-  color: white;
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -486,7 +465,14 @@ body {
 .ustitle{
   color: white;
   padding-top:20px;
+  padding: 12vh 9vw
 }
+
+.nosotros {
+  font-size: 14px;
+  text-align: justify
+}
+
 .video {
   filter: brightness(60%);
   position: fixed;
@@ -495,7 +481,15 @@ body {
 top: 50%;
 left: 50%;
 transform: translateX(-50%) translateY(-50%);
-z-index: -1;
+z-index: -1
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .altus {
+    padding: 12vh 30vw
+  }
+
 }
 
 
