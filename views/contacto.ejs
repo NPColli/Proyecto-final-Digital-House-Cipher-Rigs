@@ -20,10 +20,10 @@
     </video>
     <h1 class="h1form">Contáctenos</h1>
 
-    <form action="/" method="POST" class="formulario">
+    <form action="/contacto" method="POST" class="formulario">
 
         <label class="labelForm" for="nombre">Nombre</label>
-        <input type="text" name="titulo" placeholder="Nombre" class="control" required>
+        <input type="text" name="nombre" placeholder="Nombre" class="control" required>
 
         <label class="labelForm" for="email">E-mail</label>
         <input type="email" name="email" placeholder="Ingrese su dirección de E-mail" class="control" required>
@@ -34,8 +34,6 @@
         <label class="labelForm" for="mensaje">Mensaje</label>
         <textarea name="mensaje" placeholder="Ingrese el motivo de su consulta" class="control control1" required></textarea>
 
-        <label class="labelForm" for="mensaje">Puede ingresar imagenes si lo desea</label>
-        <input type="file" name="imagenesConsulta" accept=".jpg" multiple>
         <br>
         <button type="submit" class="buttons">Enviar</button>
     </form>

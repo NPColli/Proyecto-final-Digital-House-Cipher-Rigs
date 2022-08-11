@@ -4,6 +4,7 @@ const mainController = require('../controllers/mainController');
 
 route.get('/', mainController.index); //localhost3000
 route.get('/nosotros', mainController.nosotros); //localhost3000/nosotros
-route.get('/contacto', mainController.contacto); //localhost3000/contacto
+route.get('/contacto', mainController.contacto);
+route.post('/contacto', mainController.guardarcontacto); //localhost3000/contacto
 
 module.exports = route;

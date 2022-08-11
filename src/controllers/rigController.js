@@ -4,7 +4,7 @@ let rigController = {
     crear: function ( req, res){
 db.Rig.findAll()
 .then(function(rigs){
-    return res.render('./products/crearRig', {rigs:rigs})
+    return res.render('./admin/crearRig', {rigs:rigs})
 })
     }
     ,

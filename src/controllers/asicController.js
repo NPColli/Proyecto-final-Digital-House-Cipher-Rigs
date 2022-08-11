@@ -5,7 +5,7 @@ let asicController = {
     crear: function ( req, res){
 db.Asic.findAll()
 .then(function(asics){
-    return res.render('./products/crearAsic', {asics:asics})
+    return res.render('./admin/crearAsic', {asics:asics})
 })
     }
     ,
