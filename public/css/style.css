@@ -7,13 +7,11 @@
   background-color: #ffffff00;
   padding: 20px;
   top: 0;
-  left: 0;
   width: 100%;
 }
 
 .logo {
   display: flex;
-  margin-right: auto;
   align-items: center;
 }
 
@@ -29,16 +27,17 @@
   font-family: Didact Gothic;
   font-size: 14px;
   align-items: center;
-  display: flex
+  display: flex;
+  margin: auto;
 }
 
-nav a {
+.desktopnav a {
   color:white;
   text-decoration: none;
   margin: 1em
 }
 
-nav a:hover {
+.desktopnav a:hover {
   border-color: transparent;
   background-color: rgba(255, 255, 255, 0.134);
   border-radius: 6px;
@@ -63,8 +62,11 @@ nav a:hover {
 }
 
 .iconos {
-  margin: 1em;
+  display: flex;
+  width: 120px;
+  justify-content: space-evenly;
 }
+
 
 .menuToggle {
 display: block;
@@ -210,10 +212,10 @@ body {
 /* Login y Register Styles */
 
 .control {
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
-  height: 35px;
-  width: 400px;
+  height: 33px;
+  width: 250px;
   border-radius: 20px;
   background-color: rgba(67, 63, 62, 0.9)
 }
@@ -227,10 +229,10 @@ body {
 
 .buttons {
   color: white;
-  width: 200px;
+  width: 150px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.4);
-  height: 35px;
+  height: 33px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .buttons:hover{
@@ -266,7 +268,7 @@ body {
 .h1form {
   text-align: center;
   margin-top: 10px;
-  padding-top: 50px;
+  padding-top: 65px;
   padding-bottom: 20px;
 }
 
@@ -393,11 +395,12 @@ body {
   position: fixed;
   min-width: 100%;
   min-height: 100%;
-top: 50%;
-left: 50%;
-transform: translateX(-50%) translateY(-50%);
-z-index: -1
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1
 }
+
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -420,7 +423,6 @@ z-index: -1
   justify-content: center;
   margin: auto;
   margin-top: 10px;
-
 }
 
 
@@ -432,7 +434,6 @@ z-index: -1
   display: flex;
   text-align: center;
   justify-content: center;
-
 }
 
 .textoProductos{
@@ -447,16 +448,6 @@ z-index: -1
   border-radius: 50px;
   background-color: rgba(50, 50, 50, 0.5);
   flex-wrap: wrap;
-
-}
-
-.buttons{
-  border-radius: 30px;
-  min-width: auto;
-  min-height: auto;
-  padding: 2%;
-  background-color: rgba(0, 0, 0, 0.661);
-  color: #fff;
 }
 
 .barraProductos{
@@ -478,11 +469,7 @@ height: 150px;
 width: 300px;
 background-color: rgba(50, 50, 50, 0.705);
 border-radius: 30px;
-
 }
-
-
-
 
 .flechaIzqProductos{
   height: 50px;
