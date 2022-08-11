@@ -2,89 +2,66 @@
 
 .header {
   display: flex;
-  position: relative;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  position: fixed;
   z-index: 9999;
   background-color: #ffffff00;
-  padding: 30px;
-  
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .logo {
-margin-right: 15%;
+  display: flex;
+  margin-right: auto;
+  align-items: center;
 }
 
 .form1 {
-  width:80px;
-  height:14px;
-  color: white;
   text-decoration: none;
   text-align: center;
   padding-left: 0px;
-  align-items: center;
-}
-.form1:hover{
-  border: 2px;
-  border-color: transparent;
-  background-color: rgba(255, 255, 255, 0.148);
-  border-radius: 2px;
-  color: white;
-
-
 }
 
 
-nav {
-  font-family: Didact Gothic;
-  color: white;
-  font-size: 14px;
-  align-items: center;
-}
 
 .desktopnav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  font-family: Didact Gothic;
+  font-size: 14px;
+  align-items: center;
+  display: flex
 }
 
 nav a {
   color:white;
   text-decoration: none;
-  padding: 1em;
-  margin-top:auto;
+  margin: 1em
 }
 
 nav a:hover {
-  color: grey;
-}
-
-.iconos {
-display: flex;
-flex-direction: row-reverse;
- 
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.134);
+  border-radius: 6px;
 }
 
 .login {
   width: 12px;
-display: flex;
-flex-direction: row-reverse;
 }
+
 .login:hover{
   transform: translateY(-30%);
-  transition: all 400ms;
+  transition: all 0.4s;
 }
 
 .shop {
   width: 14px;
-  padding: 0%;
-
 }
 
 .shop:hover{
   transform: translateY(-30%);
-  transition: all 400ms;
+  transition: all 0.4s;
 }
+
 .menuToggle {
 display: block;
 position:absolute;
@@ -213,7 +190,7 @@ transform: none;
 
 body {
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin: 0%;
   font-family: Didact Gothic;
@@ -386,87 +363,21 @@ body {
 }
 
 
-.imagenProducto {
-  height: 30%;
-  width: 30%;
-  max-height: 300px;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  margin-left: 40%;
-  margin-top: 5%;
-}
-
-.textoProductos {
-  height: 45%;
-  width: 55%;
-  max-height: 420px;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: #fff;
-  border-radius: 50px;
-  background-color: rgba(50, 50, 50, 0.5);
-  flex-wrap: wrap
-}
-
-.barraProductos {
-  height: 45%;
-  width: 1300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 8%
-}
-
-.imagenesBarraProductos {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  height: 150px;
-  width: 300px;
-  background-color: rgba(50, 50, 50, 0.705);
-  border-radius: 30px
-}
 
 
-.flechaIzqProductos {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  text-align: center;
-  justify-content: center
-}
 
-.flechaDerProductos {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  text-align: center;
-  justify-content: center
-}
+
+
 
 .altus{
   display: flex;
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  margin-left: 35%;
-  margin-right: 35%;
-  margin-top:5%;
-  margin-bottom: auto;
+  padding: 12vh 9vw;
+  text-align: center;
 }
 
-.ustitle{
-  color: white;
-  padding-top:20px;
-  padding: 12vh 9vw
-}
 
 .nosotros {
   font-size: 14px;
@@ -491,6 +402,105 @@ z-index: -1
   }
 
 }
+
+
+
+
+/* Product Detail */
+.Productos {
+  height: 30%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+
+}
+
+
+.imagenProducto {
+  height: 30%;
+  width: 30%;
+  max-height: 300px;
+  max-width: 300px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.textoProductos{
+  height: 45%;
+  width: 55%;
+  max-height: 420px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  border-radius: 50px;
+  background-color: rgba(50, 50, 50, 0.5);
+  flex-wrap: wrap;
+
+}
+
+.buttons{
+  border-radius: 30px;
+  min-width: auto;
+  min-height: auto;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.661);
+  color: #fff;
+}
+
+.barraProductos{
+  height: 45%;
+  width: 1300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.imagenesBarraProductos {
+display: flex;
+text-align: center;
+justify-content: center;
+height: 150px;
+width: 300px;
+background-color: rgba(50, 50, 50, 0.705);
+border-radius: 30px;
+
+}
+
+
+
+
+.flechaIzqProductos{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.flechaDerProductos{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+
+
+
 
 
 .bodyslider{
@@ -555,6 +565,9 @@ flex: 100;
   transition: opacity 0.3s ease-in 0.4s;
 }
 
+
+
+
 .footer-section {
   background: #0000005d;
   position: relative;
@@ -564,7 +577,6 @@ flex: 100;
  
 }
 .footer-cta {
-  border-bottom: 1px solid #ffffff;
   margin-right: 5%;
 }
 .single-cta i {
@@ -657,7 +669,7 @@ flex: 100;
 }
 .footer-widget ul li {
   display: inline-block;
-  float: right;
+  float: left;
   width: 50%;
   margin-bottom: 12px;
   font-size: 14px;
@@ -741,11 +753,6 @@ flex: 100;
   .github{
     text-decoration: none;
     color: white;
-
-  }
-
-  .acerca{
-    margin-bottom: 10%;
 
   }
   
@@ -938,8 +945,7 @@ flex: 100;
     margin-bottom: 10px;
   }
 
-  h2{
-    color:white;
+  .h2Vendidos {
     text-align: center;
     text-transform: uppercase;
   }
