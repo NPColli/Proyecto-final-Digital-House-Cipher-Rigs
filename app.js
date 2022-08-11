@@ -24,10 +24,14 @@ app.use('/contacto', contacto); //localhost3000/contacto
 app.use('/productos', asic); //localhost3000/productos
 app.use('/carrito', carrito); //localhost3000/carrito
 app.use('/asic', asic); //localhost3000/asic
-app.use('/asic/crear', asic); //localhost3000/asic
+app.use('/asic/crear', asic);
+app.use('/asic/editar', asic);//localhost3000/asic
+app.use('/asic/:id', asic);
 
 app.use('/rigs', rig); //localhost3000/rigs
 app.use('/rigs/crear', rig); //localhost3000/rigs
+app.use('/rigs/editar', rig);
+app.use('/rigs/:id', rig);
 
 app.use('/login', user); //localhost3000/loguearse
 app.use('/login/register', user); //localhost3000/register

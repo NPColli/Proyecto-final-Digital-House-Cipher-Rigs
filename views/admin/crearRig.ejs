@@ -17,9 +17,9 @@
 
     <h1 class="h1form">Crear Rig</h1>
 
-    <form action="/rigs/crear" method="POST" class="formulario">
-        <label class="labelForm" for="">Imagen</label>
-        <input type="file" name="imagen" accept=".png,.jpg" >
+    <form action="/rigs/crear" method="POST" enctype="multipart/form-data" class="formulario">
+        <label class="labelForm" for="image">Imagen</label>
+        <input type="file" name="image" accept=".png,.jpg" >
 
         <label class="labelForm" for="titulo">Titulo</label>
         <input type="text" name="titulo" placeholder="Titulo" class="control">

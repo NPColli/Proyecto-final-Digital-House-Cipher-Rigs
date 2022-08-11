@@ -4,7 +4,10 @@ const controller = {
     index: (req, res) => {
         return res.render('index');
     } ,
-        contacto: function(req, res){
+    contacto: (req, res) => {
+        return res.render('contacto');
+    },
+        guardarcontacto: function(req, res){
             db.Contact.create ({
                 nombre:req.body.nombre ,
                 email: req.body.email,

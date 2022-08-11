@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-  <title>Product Create</title>
-  <%- include('../partials/head') %>
+    <title>Product Create</title>
+    <%- include('../partials/head') %>
 </head>
 
 <body>
     <style>
         body {
-            background-image: url('../img/Back\ sesión.jpg');
+            background-image: url('../../img/Back\ sesión.jpg');
         }
     </style>
 
     <%- include ('../partials/header') %>
-    <main>
-    <h1 class="h1form">Crear Asic</h1>
 
-    <form action="/asic/crear" method="POST" class="formulario">
-        <label class="labelForm" for="">Imagen</label>
-        <input type="file" name="imagen" accept=".png,.jpg" class="control2">
+    <h1 class="h1form">Editar Rigs</h1>
+
+    <form action="/rigs/crear" method="POST" enctype="multipart/form-data" class="formulario">
+        <label class="labelForm" for="image">Imagen</label>
+        <input type="file" name="image" accept=".png,.jpg" >
 
         <label class="labelForm" for="titulo">Titulo</label>
         <input type="text" name="titulo" placeholder="Titulo" class="control">
@@ -31,12 +31,11 @@
         <textarea name="especificaciones" class="control control1"></textarea>>
 
 
-        <button type="submit" class="buttons">Publicar</button>
+        <button type="submit" class="buttons">Actualizar</button>
     </form>
-    </main>
-    <footer>
-        <%- include('../partials/footer') %>
-    </footer>
+<footer>
+    <%- include('../partials/footer') %>
+</footer>
 </body>
 
 </html>

@@ -17,7 +17,10 @@ nombre:{
 apellido:{
     type: DataTypes.STRING
 } ,
-contraseña: {
+password: {
+    type: DataTypes.STRING
+},
+rol: {
     type: DataTypes.STRING
 },
     }

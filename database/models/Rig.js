@@ -8,9 +8,9 @@ module.exports = function (sequelize, DataTypes){
         primaryKey: true,
         type: DataTypes.INTEGER
     },
-    image:{
-        type: DataTypes.BLOB
-    } ,
+    image: {
+        type: DataTypes.STRING 
+    },
     titulo:{
         type: DataTypes.STRING
     } ,

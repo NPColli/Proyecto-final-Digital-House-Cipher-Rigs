@@ -9,7 +9,7 @@
 <body>
   <style>
     body {
-      background-image: url('img/Back - home.jpg');
+      background-image: url('../img/Back - home.jpg');
     }
   </style>
   <%- include ('../partials/header') %>
@@ -19,10 +19,11 @@
     <ul>
       <% for (let i = 0; i < rigs.length; i++) { %>
         <li>
-          <a href="/rig/<%=rigs[i].id_rigs%>">
-          <%=rigs[i].image %>
+          <a href="/rig/<%=rigs[i].id_rigs%>"> </a>
+          <img src="<%=rigs[i].image %>">
           <%=rigs[i].titulo %>
-        </a>
+          <%=rigs[i].precio %>
+          <%=rigs[i].especificaciones %>
         </li>
      <% } %>
     </ul>

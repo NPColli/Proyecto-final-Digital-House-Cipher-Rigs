@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Product Create</title>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('../../img/Back\ sesión.jpg');
+        }
+    </style>
+
+    <%- include ('../partials/header') %>
+    <main>
+    <h1 class="h1form">Editar Asic</h1>
+
+    <form action="/asic/crear" method="POST" enctype="multipart/form-data" class="formulario">
+        <label class="labelForm" for="">Imagen</label>
+        <input type="file" name="image" accept=".png,.jpg" class="control2">
+
+        <label class="labelForm" for="titulo">Titulo</label>
+        <input type="text" name="titulo" placeholder="Titulo" class="control">
+
+        <label class="labelForm" for="precio">Precio</label>
+        <input type="text" name="precio" placeholder="$" class="control">
+
+        <label class="labelForm" for="especificaciones">Especificaciones</label>
+        <textarea name="especificaciones" class="control control1"></textarea>>
+
+
+        <button type="submit" class="buttons">Actualizar</button>
+    </form>
+    </main>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>

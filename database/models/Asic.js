@@ -9,8 +9,8 @@ module.exports = function (sequelize, DataTypes){
         type: DataTypes.INTEGER
     },
     image:{
-        type: DataTypes.BLOB
-    } ,
+    type: DataTypes.STRING
+    },
     titulo:{
         type: DataTypes.STRING
     } ,
