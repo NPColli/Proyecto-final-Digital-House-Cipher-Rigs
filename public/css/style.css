@@ -62,6 +62,10 @@ nav a:hover {
   transition: all 0.4s;
 }
 
+.iconos {
+  margin: 1em;
+}
+
 .menuToggle {
 display: block;
 position:absolute;
