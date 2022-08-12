@@ -4,15 +4,14 @@
   display: flex;
   position: fixed;
   z-index: 9999;
-  background-color: #ffffff00;
+  background: #ffffff00;
   padding: 20px;
   top: 0;
   width: 100%;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  position: fixed;
 }
 
 .form1 {
@@ -63,8 +62,9 @@
 
 .iconos {
   display: flex;
-  width: 120px;
-  justify-content: space-evenly;
+  margin: 1em;
+  position: fixed;
+  right: 0px;
 }
 
 
@@ -168,10 +168,6 @@ transform: none;
 @media only screen and (max-width: 599px) {
   .desktopnav {
     display: none;
-  };
-
-  .logo {
-    width: 100px
   }
 }
 
@@ -196,6 +192,7 @@ transform: none;
 
 body {
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   width: 100%;
   margin: 0%;
@@ -291,12 +288,14 @@ body {
   display: flex;
   justify-content: space-around 
 }
+.articulos div{
+  width: 10vw;
+}
 
 .total {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   position: relative;
-  right: 5%;
 }
 
 .total1 {
@@ -406,7 +405,8 @@ body {
 @media only screen and (min-width: 992px) {
   .altus {
     padding: 12vh 30vw
-  }
+  };
+
 
 }
 
@@ -659,7 +659,7 @@ flex: 100;
   background: #ffffff;
 }
 .footer-widget ul li {
-  display: inline-block;
+  display: block;
   float: left;
   width: 50%;
   margin-bottom: 12px;
