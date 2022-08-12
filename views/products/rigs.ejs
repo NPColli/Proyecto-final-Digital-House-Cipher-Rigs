@@ -8,29 +8,67 @@
 
 <body>
   <style>
-    body {
-      background-image: url('../img/Back - home.jpg');
-    }
+  
   </style>
   <%- include ('../partials/header') %>
 
   <main>
-    <h1>Listado de RIGS</h1>
-    <ul>
+    <video class="video" preload="auto" autoplay loop muted>
+      <source src="img/home.mp4" type="video/mp4">
+      <source src="img/home.mp4" btnvertype="video/webm">
+      <source src="img/home.mp4" type="video/ogg">
+  </video>
+
+  <br>
+</br>
+<br>
+</br>
+  <h1>Listado de Rigs</h1>
+  <br>
+</br>
+<br>
+</br>
+
+  <section class="product"> 
+    <button class="pre-btn"><img src="img/flecha.svg" alt=""></button>
+    <button class="nxt-btn"><img src="img/flecha.svg" alt=""></button>
+    <div class="product-container">
       <% for (let i = 0; i < rigs.length; i++) { %>
-        <li>
-          <a href="/rig/<%=rigs[i].id_rigs%>"> </a>
-          <img src="<%=rigs[i].image %>">
-          <%=rigs[i].titulo %>
-          <%=rigs[i].precio %>
-          <%=rigs[i].especificaciones %>
-        </li>
-     <% } %>
-    </ul>
+        <div class="product-card">
+            <div class="product-image">
+              <img src="../img/rigs/<%=rigs[i].image %>" class="product-thumb" alt="">
+                <button class="card-btn"><a href="/rigs/<%=rigs[i].id_rigs%>">Ver más</button></a>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand"><%=rigs[i].titulo %></h2>
+                <p class="product-short-description"><%=rigs[i].especificaciones %></p>
+                <span class="price">$<%=rigs[i].precio %></span>
+            </div>
+        </div>
+        <% } %>
+      </section>
   </main>
   <footer>
     <%- include('../partials/footer') %>
   </footer>
+  <script>
+    const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+  </script>
 </body>
 
 </html>

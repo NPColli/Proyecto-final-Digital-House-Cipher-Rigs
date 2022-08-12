@@ -10,7 +10,7 @@ db.Rig.findAll()
     ,
     guardado: function (req, res){
         db.Rig.create({
-            image:req.file.path,
+            image:req.file.filename,
             titulo: req.body.titulo,
             precio: req.body.precio,
             especificaciones:req.body.especificaciones ,

@@ -12,7 +12,7 @@ db.Asic.findAll()
     ,
     guardado: function (req, res){
         db.Asic.create({
-            image:req.file.path ,
+            image:req.file.filename,
             titulo: req.body.titulo,
             precio: req.body.precio,
             especificaciones:req.body.especificaciones ,
@@ -28,14 +28,12 @@ res.render('./products/asic', {asics:asics})
             })
 },
 
-detalle: function(req, res) {
-    db.Asic.findByPk(req.params.id, {
-        include: [{association:"titulo"}, {association: "precio"}, {association:"especificaciones"}]
-})
-        .then(function(asics){
-        res.render('./products/asicDetail',{asics:asics})
+detalle: (req, res) => {
+    db.Rig.findByPk(req.params.id)
+    .then(function(rigs){
+    res.render('./products/rigDetail', {rigs:rigs});
     })
-},
+} ,
 
 editar: function (req, res){
     db.Asic.findByPk(req.params.id)

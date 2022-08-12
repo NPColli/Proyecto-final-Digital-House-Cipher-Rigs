@@ -21,12 +21,12 @@ const storage = multer.diskStorage({
 //Creación
 route.get('/crear', asicController.crear);
 
-route.post('/crear', asicController.guardado);
+route.post('/crear',upload.single('image'), asicController.guardado);
 
 //Lectura
 route.get('', asicController.listado);
 
-route.get('/',asicController.detalle);
+route.get('/:id',asicController.detalle);
 
 //actualización
 route.get('/editar/:id', asicController.editar);
