@@ -225,20 +225,22 @@ body {
 }
 
 .buttons {
+  border-width: 10px solid white;
+  border-color: white;
   color: white;
-  width: 150px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 200px;
+  border-radius: 15px;
   height: 33px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0);
+z-index: 1;
 }
 .buttons:hover{
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(255, 255, 255);
   color: black;
-  font-weight: bold;
   transition:
 	background-color, 0.3s,
-  color, 0.3s
+  color, 0.3s;
+  z-index: 1;
 }
 
 .pass{
@@ -341,7 +343,7 @@ body {
 
 .Productos {
   font-family: Didact Gothic;
-  font-size: medium;
+  font-size: 14px;
   margin-bottom: 20%;
   height: 30%;
   width: 80%;
@@ -415,39 +417,37 @@ body {
 
 /* Product Detail */
 .Productos {
-  height: 30%;
-  width: 80%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  margin-top: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
 }
 
-
-.imagenProducto {
-  height: 30%;
-  width: 30%;
-  max-height: 300px;
-  max-width: 300px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+.espacioProducto {
+width: 100%;
+height: 300px;
+padding-bottom: 15px;
 }
-
+.avatarproducto{
+  width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 .textoProductos{
   height: 45%;
-  width: 55%;
+  width: auto;
   max-height: 420px;
   max-width: 420px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: justify;
   color: #fff;
-  border-radius: 50px;
-  background-color: rgba(50, 50, 50, 0.5);
+  border-radius: 20px;
+  background-color: rgba(4, 4, 4, 0.571);
   flex-wrap: wrap;
+  padding: 15px;
 }
 
 .barraProductos{

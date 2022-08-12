@@ -8,59 +8,41 @@
 
 <body>
   <style>
-    body {
-      background-image: url('../../img/Back product.jpg');
-    }
   </style>
   <%- include ('../partials/header') %>
   <main>
+    <video class="video" preload="auto" autoplay loop muted>
+      <source src="../img/detail.mp4" type="video/mp4">
+      <source src="../img/detail.mp4" btnvertype="video/webm">
+      <source src="../img/detail.mp4" type="video/ogg">
+  </video>
     <div class="Productos">
-      <div class="imagenProducto">
-        <img src="../../img/Products/Bitcoin Miner S19 XP.png" alt="La imagen no pudo cargar correctamente">
+      <div class="espacioProducto">
+        <img src="../img/rigs/<%=rigs.image %>" class="avatarproducto" alt="La imagen no pudo cargar correctamente">
       </div>
       <div class="textoProductos">
-        <h1></h1>
-        <br>
-        <h2>Function:</h2>
-        <h3>BTC/BCH/BSV SHA256 Air-cooling Miner</h3>
+        <h1><%=rigs.titulo%></h1>
         <br>
         <h2>Especificaciones:</h2>
+        <%=rigs.especificaciones%>
         <h3></h3>
         <br>
         <h2>Precio:</h2>
+        US$<%=rigs.precio%>
         <h2></h2>
         <br>
         <a class="form1" href="/carrito">
           <button class="buttons" type="submit">
-            <h2>Comprar</h2>
+            Comprar
           </button></a>
         <br>
       </div>
-    </div>
-    <div class="barraProductos">
-      <div class="flechaIzqProductos">
-        <img src="../../img/Flecha Left.png">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="../../img/Products/Bitcoin Miner S19 Pro.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="../../img/Products/Bitcoin Miner S19 Pro.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="../../img/Products/Bitcoin Miner S19 Pro.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="imagenesBarraProductos">
-        <img src="../../img/Products/Bitcoin Miner S19 Pro.png" alt="La imagen no pudo cargar correctamente">
-      </div>
-      <div class="flechaDerProductos">
-        <img src="../../img/Flecha Right.png">
-      </div>
-    </div>
+   
   </main>
   <footer>
     <%- include('../partials/footer') %>
   </footer>
+
 </body>
 
 </html>

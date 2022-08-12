@@ -29,9 +29,9 @@ res.render('./products/asic', {asics:asics})
 },
 
 detalle: (req, res) => {
-    db.Rig.findByPk(req.params.id)
-    .then(function(rigs){
-    res.render('./products/rigDetail', {rigs:rigs});
+    db.Asic.findByPk(req.params.id)
+    .then(function(asics){
+    res.render('./products/asicDetail', {asics:asics});
     })
 } ,
 
