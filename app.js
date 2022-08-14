@@ -1,11 +1,21 @@
 const express = require('express');
+const methodOverride = require('method-override');
 const app = express();
 const path = require('path');
+const logMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/logMiddleware'); // Para llevar un registro en txt de las URL visitadas
+const userLoggedMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/userLoggedMiddleware');
+const session = require('express-session');
+const cookies = require('cookie-parser');
 
 app.use(express.static('public'));
 app.use(express.static('views'));
 app.use(express.urlencoded({extended :false}));
+app.use(methodOverride('_method'));
 app.use(express.json());
+app.use(session({secret: "frase secreta"}));
+app.use(cookies());
+app.use(logMiddleware);
+app.use(userLoggedMiddleware);
 app.set("view engine", "ejs");
 
 //Rutas
@@ -24,17 +34,10 @@ app.use('/contacto', contacto); //localhost3000/contacto
 app.use('/productos', asic); //localhost3000/productos
 app.use('/carrito', carrito); //localhost3000/carrito
 app.use('/asic', asic); //localhost3000/asic
-app.use('/asic/crear', asic);
-app.use('/asic/editar', asic);//localhost3000/asic
-app.use('/asic/:id', asic);
-
 app.use('/rigs', rig); //localhost3000/rigs
-app.use('/rigs/crear', rig); //localhost3000/rigs
-app.use('/rigs/editar', rig);
-app.use('/rigs/:id', rig);
+
 
 app.use('/login', user); //localhost3000/loguearse
-app.use('/login/register', user); //localhost3000/register
 
 app.use((req,res,next)=>{
     res.status(404).render('not-found')

@@ -180,7 +180,6 @@ transform: none;
     display: none
   }
 }
-
 /* Body styles */
 
 * {
@@ -250,7 +249,8 @@ z-index: 1;
 
 .buttonCuenta{
   text-decoration: none;
-  color: blue;
+  color: rgb(255, 255, 255);
+ 
 }
 
 .pass:hover{
@@ -406,9 +406,8 @@ z-index: 1;
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .altus {
-    padding: 12vh 30vw
-  };
-
+    padding: 12vh 30vw;
+  }
 
 }
 
@@ -940,3 +939,14 @@ flex: 100;
     text-align: center;
     text-transform: uppercase;
   }
+
+.feedback{
+  color:rgb(255, 255, 255);
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:10%;
+}

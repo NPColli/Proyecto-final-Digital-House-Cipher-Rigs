@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include ('../partials/head', {title: "Profile"}) %>
+  <body>
+    <%- include ('../partials/header') %>
+    <video class="video" preload="auto" autoplay loop muted>
+      <source src="../../img/home.mp4" type="video/mp4">
+      <source src="../../img/home.mp4" btnvertype="video/webm">
+      <source src="../../img/home.mp4" type="video/ogg">
+  </video>
+    <main class="profile">
+      <h1>Tu cuenta</h1>
+      <h2>Hola <%= user.nombre %></h2>
+     
+      <h2><%= user.email %></h2>
+      
+<br>
+      <button class="buttons"><a class="buttonCuenta" href="/login/editar/<%= user.user_id %>">Editar usuario </button>
+        <br>
+        <button class="buttons"><a class="buttonCuenta" href="/login/logout">Cerrar sesión</button>
+      </main>
+  </body>
+  <%- include('../partials/footer') %>
+</html>

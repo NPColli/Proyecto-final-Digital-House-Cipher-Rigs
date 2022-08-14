@@ -1,25 +1,28 @@
 const express = require('express');
 const route = express.Router();
 const {body} = require('express-validator');
+const loginValidations = require("../middlewares/loginvalidations");
+const registerValidations = require("../middlewares/registerValidations");
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const logDBMiddleware = require("../middlewares/logDBMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
+const db = require("../../database/models")
+
 const usuariosController = require('../controllers/usuariosController');
 
-//validaciones
-const validacionRegistro = [
-body('nombre').notEmpty().withMessage('Debes completar el campo nombre'),
-body('apellido').notEmpty().withMessage('Debes completar el campo apellido'),
-body('email').isEmail().withMessage('Debes completar un email válido'),
-body('contraseña').notEmpty().withMessage('Debes completar el campo contraseña'),
-];
 
-const validacionlogin = [
-    body('email').isEmail().withMessage('Debes completar un email válido'),
-    body('contrasenia').notEmpty().withMessage('Debes completar el campo contraseña'),
-    ];
-
-//rutas
-route.get('/', usuariosController.login); //localhost3000/loguearse
-route.post('/',validacionlogin, usuariosController.login); //localhost3000/loguearse
-route.get('/register', usuariosController.listado); //localhost3000/register
-route.post('/register', validacionRegistro, usuariosController.register); //localhost3000/register
-
+//login
+route.get('/', guestMiddleware, usuariosController.login); //localhost3000/loguearse
+route.post('/', loginValidations, usuariosController.processLogin); //localhost3000/loguearse
+//registro
+route.get('/register', guestMiddleware, usuariosController.register);
+route.post('/register', registerValidations, logDBMiddleware,  usuariosController.processRegister) //localhost3000/register
+//perfil
+route.get('/profile/:id',authMiddleware, usuariosController.profile); //, authMiddleware
+// Logout
+route.get("/logout/", usuariosController.logout);
 module.exports = route;
+
+// Editar usuario
+route.get("/editar/:id", usuariosController.uEdit);
+route.post("/editar/:id", registerValidations, usuariosController.uUpdate);

@@ -16,40 +16,36 @@
   <%- include ('../partials/header') %>
   </nav>
   <main class="main">
-    <h1 class="h1form">Crea tu cuenta</h1>
-    <h2 class="rapid">Es rápido y fácil</h2>
+    <h1 class="h1form">Edición del usuario <%= user.nombre %></h1>
     
-    <form action="/login/register" method="POST" class="formulario">
+    <form action="/login/editar/<%= user.user_id %>" method="POST" class="formulario">
       <label class="labelForm">Nombre</label>
       <input type="text" class="control" name="nombre" placeholder="Ingrese su Nombre" class="<%= (locals.errors && errors.nombre) ? 'is-invalid' : null %> nombre"
-      value="<%= (locals.oldData) ? oldData.nombre : null %>" required>
+      value="<%= user.nombre %>" >
       <% if (locals.errors && errors.nombre) { %> <span class="feedback">
     <%= errors.nombre.msg %> </span>
 <% } %>
     </div>
       <label class="labelForm">Apellido</label>
       <input type="text" class="control" name="apellido" placeholder="Ingrese su Apellido" class="<%= (locals.errors && errors.apellido) ? 'is-invalid' : null %> apellido"
-      value="<%= (locals.oldData) ? oldData.apellido : null %>"  required>
+      value="<%= user.apellido %>">
       <% if (locals.errors && errors.apellido) { %> <span class="feedback">
         <%= errors.apellido.msg %> </span>
     <% } %>
     </div>
       <label class="labelForm">E-mail</label>
-      <input type="text" class="control" name="email" placeholder="Ingrese su Email" class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %> email"
-      value="<%= (locals.oldData) ? oldData.email : null %>" required>
+      <input type="email" class="control" name="email" placeholder="Ingrese su Email" class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %> email"
+      value="<%= user.email %>">
       <% if (locals.errors && errors.email) { %> <span class="feedback">
         <%= errors.email.msg %> </span>
     <% } %>
     </div>
-      <label class="labelForm">Contraseña</label>
-      <input type="password" class="control" name="password" placeholder="Ingrese su Constraseña" class="<%= (locals.errors && errors.password) ? 'is-invalid' : null %> password" required>
-      <% if (locals.errors && errors.password) { %> <span class="feedback">
-        <%= errors.password.msg %> </span>
-    <% } %>
+      
     </div>
+<br>
+      <div><button type="submit" class="buttons" >Actualizar</button>
+       <button class="buttons"><a class="buttonCuenta" href="/login/logout">Cerrar sesión</button>
 
-      <div><button type="submit" class="buttons" >Crear Cuenta</button>
-        <button class="buttons" type="submit"><a class="form1" href="login">Ingresar</a></button>
       </div>
 
     </form>

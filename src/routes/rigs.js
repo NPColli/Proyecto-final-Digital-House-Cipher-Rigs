@@ -30,5 +30,6 @@ route.get('/:id',rigController.detalle);
 
 //actualización
 route.get('/editar/:id', rigController.editar);
+route.post('/editar/:id',upload.single('image'), rigController.actualizar);
 
 module.exports = route;

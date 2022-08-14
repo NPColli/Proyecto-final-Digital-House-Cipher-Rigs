@@ -18,10 +18,10 @@ apellido:{
     type: DataTypes.STRING
 } ,
 password: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING(400)
 },
 rol: {
-    type: DataTypes.STRING
+  type: DataTypes.TINYINT(1)
 },
     }
 let config = {

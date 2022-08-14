@@ -38,6 +38,17 @@ editar: function (req, res){
     .then(function(rigs){
         res.render('./admin/editarRig', {rigs:rigs});
         })
+},
+actualizar: function (req, res){
+    db.Rig.update ({
+        image:  req.body.image,
+        titulo: req.body.titulo,
+        precio: req.body.precio,
+        especificaciones:req.body.especificaciones 
+    }, { 
+        where: { id_rigs: req.params.id}
+})
+    res.redirect("./rigs/editar/", + req.params.id);
 }
 }
 
