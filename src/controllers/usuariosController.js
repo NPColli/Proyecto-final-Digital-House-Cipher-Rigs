@@ -1,11 +1,11 @@
 let db = require("../../database/models");
-const { validationResult } = require("express-validator"); // trae el resultados de las validaciones que hicimos
+const { validationResult } = require("express-validator"); // trae los resultados de las validaciones
 const bcrypt = require("bcryptjs");
 
 
 let usuariosController = {
     login: (req, res) => {
-        console.log(req.cookies); //obj. lit. "cookies" - trae todas las cookies del navegador
+        console.log(req.cookies); //trae todas las cookies del navegador
         return res.status(200).render("users/login");
       },
     processLogin: (req, res) => {
@@ -19,20 +19,17 @@ let usuariosController = {
             //devuelve el objeto usuario en sí
     
             if (userToLogin) {
-              // si el mail existe en mi base de datos, compara las contraseñas. Devuelve true or false
+              // si el mail existe en la base de datos, compara las contraseñas. Devuelve true or false
               let isOkThePassword = bcrypt.compareSync(
                 req.body.password,
                 userToLogin.password
               );
     
               if (isOkThePassword) {
-                // si el password tmb está ok, permite el ingreso
-                //quiero guardar al usuario en session. Pero no me interesa, y es más seguro, eliminar antes el password.
-                delete userToLogin.password;
+                delete userToLogin.password; //el usuario se guarda en session, la contraseña se elimina
                 //session, va con request, porque es manejada desde el back. A diferencia de cookie, que es manejada por el front (xq se almacenará en el nav del usuario)
                 req.session.userLogged = userToLogin;
                 //ahora el obj session, tiene otra propiedad: userLogged (además de cookie), que guarda toda la info de userToLogin
-    
                 //cuando ya tengo los datos de la persona a loguear, pregunto si tmb viajó el rememberUser:
                 if (req.body.rememberUser) {
                   // si viajó, quiero que la cookie se llame userEmail y guarde el email, * 1 seg * 60 * 60 = 1 hora
@@ -43,8 +40,7 @@ let usuariosController = {
                 console.log(req.session.userLogged.id);
                 return res.redirect('/');
               }
-              return res.render("users/login", {
-                // si el password no está ok
+              return res.render("users/login", { //si la contraseña no es correcta
                 errors: {
                   email: {
                     msg: "Las credenciales son inválidas",
@@ -53,8 +49,7 @@ let usuariosController = {
               });
             }
     
-            return res.render("users/login", {
-              // si el mail no está ok
+            return res.render("users/login", { //si la email no es correcto
               errors: {
                 email: {
                   msg: "No se encuentra este email en nuestra base de datos",

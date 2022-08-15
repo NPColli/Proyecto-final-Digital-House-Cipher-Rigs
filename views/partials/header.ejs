@@ -1,5 +1,5 @@
-<header class="header">
-    
+<header>
+    <div class="black">
     <div class="logo">
         <a href="http://localhost:3000/">
             <img src="/img/CIPHER.png" width="120px ">
@@ -52,4 +52,19 @@
         </div>
 
     </nav>
+    <script>
+        $(document).ready(function(){
+        $(window).scroll(function(){
+  	    var scroll = $(window).scrollTop();
+	    if (scroll > 60) {
+	       $(".black").css("background" , "#0000005d");
+	    }
+
+	    else{
+		  $(".black").css("background" , "transparent");  	
+	    }
+       })
+     })
+    </script>
+    </div>
 </header>

@@ -14,15 +14,15 @@ const usuariosController = require('../controllers/usuariosController');
 //login
 route.get('/', guestMiddleware, usuariosController.login); //localhost3000/loguearse
 route.post('/', loginValidations, usuariosController.processLogin); //localhost3000/loguearse
-//registro
+//Registro
 route.get('/register', guestMiddleware, usuariosController.register);
 route.post('/register', registerValidations, logDBMiddleware,  usuariosController.processRegister) //localhost3000/register
-//perfil
-route.get('/profile/:id',authMiddleware, usuariosController.profile); //, authMiddleware
-// Logout
+//Perfil
+route.get('/profile/:id',authMiddleware, usuariosController.profile); //authMiddleware
+//Logout
 route.get("/logout/", usuariosController.logout);
 module.exports = route;
 
-// Editar usuario
+//Editar usuario
 route.get("/editar/:id", usuariosController.uEdit);
 route.post("/editar/:id", registerValidations, usuariosController.uUpdate);

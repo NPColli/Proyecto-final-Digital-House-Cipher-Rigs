@@ -1,9 +1,9 @@
 function authMiddleware(req, res, next) {
   if (!req.session.userLogged) {
-    //si NO hay nadie logueado, que vaya al login
+    //si no hay nadie logueado, te vuelve al login
     return res.redirect("users/login");
   }
-  next(); // si hay alguien logueado, sigue al controlador 
+  next(); // si hay alguien logueado, va al controlador 
 }
 
 module.exports = authMiddleware;

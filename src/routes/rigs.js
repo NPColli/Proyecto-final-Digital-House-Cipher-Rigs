@@ -25,10 +25,10 @@ route.post('/crear', upload.single('image'), rigController.guardado);
 //Lectura
 route.get('', rigController.listado);
 
-//detalle
+//Detalle
 route.get('/:id',rigController.detalle);
 
-//actualización
+//Actualización
 route.get('/editar/:id', rigController.editar);
 route.post('/editar/:id',upload.single('image'), rigController.actualizar);
 

@@ -28,7 +28,7 @@ route.get('', asicController.listado);
 
 route.get('/:id',asicController.detalle);
 
-//actualización
+//Actualización
 route.get('/editar/:id', asicController.editar);
 
 module.exports = route;
