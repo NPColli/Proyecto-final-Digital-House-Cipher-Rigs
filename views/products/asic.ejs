@@ -24,14 +24,14 @@
     <div class="product-container">
       <% for (let i = 0; i < asics.length; i++) { %>
         <div class="product-card">
-            <div class="product-image">
+            <div class="product-image2">
               <img src="../img/asic/<%=asics[i].image %>" class="product-thumb" alt="">
                 <button class="card-btn"><a href="/asic/<%=asics[i].id_asic%>">Ver más</button></a>
             </div>
             <div class="product-info">
                 <h2 class="product-brand"><%=asics[i].titulo %></h2>
                 <p class="product-short-description"><%=asics[i].especificaciones %></p>
-                <span class="price">US$<%=asics[i].precio %></span>
+                <span class="price2">US$<%=asics[i].precio %></span>
             </div>
         </div>
         <% } %>

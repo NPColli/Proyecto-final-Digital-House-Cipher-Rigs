@@ -24,14 +24,14 @@
     <div class="product-container">
       <% for (let i = 0; i < rigs.length; i++) { %>
         <div class="product-card">
-            <div class="product-image">
+            <div class="product-image2">
               <img src="../img/rigs/<%=rigs[i].image %>" class="product-thumb" alt="">
                 <button class="card-btn"><a href="/rigs/<%=rigs[i].id_rigs%>">Ver más</button></a>
             </div>
             <div class="product-info">
                 <h2 class="product-brand"><%=rigs[i].titulo %></h2>
                 <p class="product-short-description"><%=rigs[i].especificaciones %></p>
-                <span class="price">US$<%=rigs[i].precio %></span>
+                <span class="price2">US$<%=rigs[i].precio %></span>
             </div>
         </div>
         <% } %>
