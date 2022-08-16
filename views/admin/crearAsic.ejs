@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Product Create</title>
+  <title>Crear Asic</title>
   <%- include('../partials/head') %>
 </head>
 
@@ -18,19 +18,18 @@
     <h1 class="h1form">Crear Asic</h1>
 
     <form action="/asic/crear" method="POST" enctype="multipart/form-data" class="formulario">
-        <label class="labelForm" for="">Imagen</label>
-        <input type="file" name="image" accept=".png,.jpg" class="control2">
+        <label class="labelForm" for="image">Imagen</label>
+        <input type="file" name="image" accept=".png,.jpg" class="controlI" required>
 
-        <label class="labelForm" for="titulo">Titulo</label>
-        <input type="text" name="titulo" placeholder="Titulo" class="control">
+        <label class="labelForm" for="titulo">Nombre</label>
+        <input type="text" name="titulo" placeholder="Nombre" class="control" required>
 
         <label class="labelForm" for="precio">Precio</label>
-        <input type="text" name="precio" placeholder="$" class="control">
+        <input type="text" name="precio" placeholder="$" class="control" required>
 
         <label class="labelForm" for="especificaciones">Especificaciones</label>
-        <textarea name="especificaciones" class="control control1"></textarea>>
-
-
+        <textarea name="especificaciones" placeholder="Ingrese las especificaciones del producto" class="control control1" required></textarea>
+        <br>
         <button type="submit" class="buttons">Publicar</button>
     </form>
     </main>

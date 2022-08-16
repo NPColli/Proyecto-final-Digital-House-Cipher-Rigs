@@ -200,10 +200,11 @@ body {
 .control {
   font-size: 14px;
   text-align: center;
-  height: 33px;
+  height: 34px;
   width: 250px;
   border-radius: 20px;
-  background-color: rgba(67, 63, 62, 0.9)
+  background-color: rgba(67, 63, 62, 0.9);
+  margin-bottom: 10px;
 }
 
 .parrafo {
@@ -213,38 +214,46 @@ body {
   padding-bottom: 5%;
 }
 
+.buttonCuenta{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 42.5px;
+}
+
 .buttons {
-  border-width: 10px solid white;
   border-color: white;
   color: white;
   width: 150px;
   border-radius: 15px;
-  height: 33px;
+  height: 34px;
   background-color: rgba(0, 0, 0, 0);
-z-index: 1;
 }
+
 .buttons:hover{
   background-color: rgb(255, 255, 255);
   color: black;
   transition:
 	background-color, 0.3s,
   color, 0.3s;
-  z-index: 1;
+}
+
+.buttonCuenta:hover{
+  color: black;
+  transition:
+  color, 0.3s;
 }
 
 .pass{
-  text-decoration: none;
-  color: blue;
+  color: white;
 }
 
-.buttonCuenta{
-  text-decoration: none;
-  color: rgb(255, 255, 255);
- 
-}
 
 .pass:hover{
   color: white;
+}
+
+.regist{
+  font-size: 20px;
 }
 
 .formulario {
@@ -269,9 +278,7 @@ z-index: 1;
 
 .rapid{
   text-align: center;
-  padding-top: 10px;
-  margin-bottom: 50px;
-  margin-top: 0px;
+  padding: 20px
 }
 
 
@@ -310,16 +317,15 @@ z-index: 1;
 
 
 .control1{
-  margin:0;
   border-radius: 10px;
-  background-color: rgba(67, 63, 62, 0.9);
   height: 10vh;
+  font-family: 'Didact Gothic';
+  font-size: 15.5px;
 }
 
-.control2{
-  background-color:rgba(68,62,60,0.5);
-  font-size: 18px;
-  text-align: center;
+.controlI{
+  font-size: 14px;
+  margin: 5px;
 }
 
 .descripcion {
@@ -740,7 +746,7 @@ border-radius: 30px;
   
   .product-card {
     flex: 0 0 auto;
-    width: 250px;
+    width: 280px;
     height: 450px;
     margin-right: 40px;
     background-color: rgba(0, 0, 0, 0.305);
@@ -761,7 +767,7 @@ border-radius: 30px;
     width: 100%;
     height: 100%;
     object-fit: contain;
-  
+    padding: 10px;
   
   }
   
@@ -802,15 +808,15 @@ border-radius: 30px;
   }
   
   .product-info {
-    color:white;
     width: 100%;
     height: 100px;
     padding-top: 10px;
+    padding-left: 10px;
   }
   
   .product-brand {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 20px;
   }
   
   .product-short-description {
@@ -994,6 +1000,11 @@ border-radius: 30px;
 @media only screen and (min-width: 992px) {
   .altus {
     padding: 12vh 30vw;
+  }
+
+  .pass {
+    color: blue;
+    text-decoration: none;
   }
 
 }

@@ -2,7 +2,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const app = express();
 const path = require('path');
-const logMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/logMiddleware'); // Para llevar un registro en txt de las URL visitadas
+const logMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/logMiddleware'); //Lleva el registro de las URL visitadas
 const userLoggedMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/userLoggedMiddleware');
 const session = require('express-session');
 const cookies = require('cookie-parser');
@@ -37,7 +37,7 @@ app.use('/asic', asic); //localhost3000/asic
 app.use('/rigs', rig); //localhost3000/rigs
 
 
-app.use('/login', user); //localhost3000/loguearse
+app.use('/login', user); //localhost3000/login
 
 app.use((req,res,next)=>{
     res.status(404).render('not-found')

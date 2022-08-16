@@ -12,8 +12,8 @@ const usuariosController = require('../controllers/usuariosController');
 
 
 //login
-route.get('/', guestMiddleware, usuariosController.login); //localhost3000/loguearse
-route.post('/', loginValidations, usuariosController.processLogin); //localhost3000/loguearse
+route.get('/', guestMiddleware, usuariosController.login); //localhost3000/login
+route.post('/', loginValidations, usuariosController.processLogin); //localhost3000/login
 //Registro
 route.get('/register', guestMiddleware, usuariosController.register);
 route.post('/register', registerValidations, logDBMiddleware,  usuariosController.processRegister) //localhost3000/register
