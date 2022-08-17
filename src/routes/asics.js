@@ -30,5 +30,10 @@ route.get('/:id',asicController.detalle);
 
 //Actualización
 route.get('/editar/:id', asicController.editar);
+route.post('/editar/:id',upload.single('image'), asicController.actualizar);
+
+//Eliminar
+route.post("/destruir/:id", asicController.destruir);
+route.post("/softdelete/:id", asicController.eliminar);
 
 module.exports = route;

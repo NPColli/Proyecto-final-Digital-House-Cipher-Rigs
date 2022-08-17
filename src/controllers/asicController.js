@@ -1,6 +1,6 @@
 
 let db = require("../../database/models");
-
+const { validationResult } = require("express-validator");
 
 let asicController = {
     crear: function ( req, res){
@@ -41,7 +41,50 @@ editar: function (req, res){
     .then(function(asics){
         res.render('./admin/editarAsic', {asics:asics});
         })
-}
+},
+
+actualizar: (req, res) => {
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      console.log("Entró al método actualizar del asicController.js");
+      db.Asic.update(
+        {
+          nombre: req.body.nombre,
+          precio: req.body.precio,
+       especificaciones: req.body.especificaciones,
+          image: req.file.filename,
+          status: 1,
+        },
+        {
+          where: { id_asic: req.params.id },
+        }
+      );
+      res.redirect("/asic");
+      
+    }
+},
+//Hard delete
+destruir: (req, res) => {
+    console.log("Entró al método destroy del asicController.js");
+    db.Asic.destroy({
+      where: {
+        id_asic: req.params.id,
+      },
+    });
+    res.redirect("/");
+  },
+//Soft delete
+  eliminar: (req, res) => {
+    db.Asic.update(
+      {
+        status: 0,
+      },
+      {
+        where: { id_asic: req.params.id },
+      }
+    );
+    res.redirect("/");
+  },
 }
 
 module.exports = asicController;

@@ -39,17 +39,49 @@ editar: function (req, res){
         res.render('./admin/editarRig', {rigs:rigs});
         })
 },
-actualizar: function (req, res){
-    db.Rig.update ({
-        image:  req.body.image,
-        titulo: req.body.titulo,
-        precio: req.body.precio,
-        especificaciones:req.body.especificaciones 
-    }, { 
-        where: { id_rigs: req.params.id}
-})
-    res.redirect("./rigs/editar/", + req.params.id);
-}
+actualizar: (req, res) => {
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      console.log("Entró al método actualizar del asicController.js");
+      db.Rig.update(
+        {
+          nombre: req.body.nombre,
+          precio: req.body.precio,
+       especificaciones: req.body.especificaciones,
+          image: req.file.filename,
+          status: 1,
+        },
+        {
+          where: { id_rigs: req.params.id },
+        }
+      );
+      res.redirect("/rigs");
+      
+    }
+},
+//Hard delete
+destruir: (req, res) => {
+    console.log("Entró al método destroy del rigController.js");
+    db.Asic.destroy({
+      where: {
+        id_rigs: req.params.id,
+      },
+    });
+    res.redirect("/");
+  },
+
+//Soft delete
+  eliminar: (req, res) => {
+    db.Rig.update(
+      {
+        status: 0,
+      },
+      {
+        where: { id_rigs: req.params.id },
+      }
+    );
+    res.redirect("/");
+  },
 }
 
 module.exports = rigController;
