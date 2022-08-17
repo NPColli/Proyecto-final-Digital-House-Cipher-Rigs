@@ -13,13 +13,12 @@
         <div> <a class="palabrasNav" href="/contacto"> Contacto </a> </div>
         <% if (locals.isLogged) { %>
         <div class="iconos">
-                <a href="/login/profile/:id"> <img class="login" src="/img/User icon.png" alt=""> </a>
+                <a href="/login/profile/:id"> <img class="login" src="/img/User icon.png" alt=""></a>
 
-        <a href="/carrito"> <img class="shop" src="/img/Shop icon.png" alt=""> </a>
+        <a href="/carrito"> <img class="shop" src="/img/Shop icon.png" alt=""></a></div>
         <% }  else { %>
             <div class="iconos">
-                <a href="/login"> <img class="login" src="/img/User icon.png" alt=""> </a>
-        </div>
+                <a href="/login"> <img class="login" src="/img/User icon.png" alt=""></a></div>
         <% } %>
     </nav>
 
@@ -44,13 +43,18 @@
                 <a class="form1" href="/contacto">
                     <li>Contacto</li>
                 </a>
-                <a class="form1" href="/login">
-                    <li>Cuenta</li>
-                </a>
-                <a class="form1" href="/carrito">
-                    <li>Carrito</li>
-                </a>
-                
+                <% if (locals.isLogged) { %>
+                    <a class="form1" href="/login/profile/:id">
+                        <li>Cuenta</li>
+                    </a>
+                    <a class="form1" href="/carrito">
+                        <li>Carrito</li>
+                    </a>
+                    <% }  else { %>
+                    <a class="form1" href="/login">
+                        <li>Cuenta</li>
+                    </a>
+                    <% } %>                
             </ul>
 
         </div>
