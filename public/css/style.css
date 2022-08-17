@@ -976,6 +976,12 @@ padding-bottom: 15px;
   text-align: left;
 }
 
+.adminview{
+display: flex;
+flex-direction: column;
+justify-items: center;
+}
+
 
 
 

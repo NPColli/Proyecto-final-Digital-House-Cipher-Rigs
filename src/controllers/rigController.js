@@ -14,7 +14,7 @@ db.Rig.findAll()
             titulo: req.body.titulo,
             precio: req.body.precio,
             especificaciones:req.body.especificaciones ,
-
+            status: 1,
         })
         res.redirect("/rigs");
     }

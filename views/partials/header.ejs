@@ -7,15 +7,20 @@
     </div>
 
     <nav class="desktopnav">
-        <div> <a class="palabrasNav" href="/productEdit"> Crear </a> </div>
         <div> <a class="palabrasNav" href="/asic"> Asic </a> </div>
         <div> <a class="palabrasNav" href="/rigs"> Rigs </a> </div>
         <div> <a class="palabrasNav" href="/nosotros"> Nosotros </a> </div>
         <div> <a class="palabrasNav" href="/contacto"> Contacto </a> </div>
+        <% if (locals.isLogged) { %>
         <div class="iconos">
-        <a href="/login/profile/:id"> <img class="login" src="/img/User icon.png" alt=""> </a>
+                <a href="/login/profile/:id"> <img class="login" src="/img/User icon.png" alt=""> </a>
+
         <a href="/carrito"> <img class="shop" src="/img/Shop icon.png" alt=""> </a>
+        <% }  else { %>
+            <div class="iconos">
+                <a href="/login"> <img class="login" src="/img/User icon.png" alt=""> </a>
         </div>
+        <% } %>
     </nav>
 
     <nav role="navigation">
@@ -27,8 +32,6 @@
             <span></span>
 
             <ul class="menu">
-                <a class="form1" href="/productEdit">
-                    <li>Crear</li>
                 <a class="form1" href="/asic">
                     <li>Asic</li>
                 </a>
@@ -47,6 +50,7 @@
                 <a class="form1" href="/carrito">
                     <li>Carrito</li>
                 </a>
+                
             </ul>
 
         </div>
