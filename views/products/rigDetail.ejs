@@ -31,7 +31,7 @@
         <% if (locals.userLogged) { %>
           <input class="quantity-field" type="number" name="cantidad" value="1" required min="1">
           <br>
-          <form action="/carrito/<%=rigs.id_rig%>" method="POST" class="product-cart-form">
+          <form action="/carrito/<%=rigs.id_rigs%>" method="POST" class="product-cart-form">
           <button class="buttons" type="submit" value="sumarAlCarrito">
            Comprar
           </button>
@@ -40,7 +40,7 @@
           <% } %>
           <br><br>
           <% if (locals.userLogged && locals.userLogged.rol===0) { %>
-            <a class="form1" href="/rigs/editar/<%=rigs.id_rig%>">
+            <a class="form1" href="/rigs/editar/<%=rigs.id_rigs%>">
               <button class="buttons">
                 Editar RIG
               </button></a>
