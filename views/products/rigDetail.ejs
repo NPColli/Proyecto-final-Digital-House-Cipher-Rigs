@@ -35,6 +35,13 @@
           <button class="buttons" type="submit">
             Comprar
           </button></a>
+          <br>
+          <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+            <a class="form1" href="/rigs/editar/<%=rigs.id_rigs%>">
+              <button class="buttons">
+                Editar RIG
+              </button></a>
+            <% } %>
         <br>
       </div>
    

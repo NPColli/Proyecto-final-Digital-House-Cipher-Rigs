@@ -24,6 +24,7 @@
                 <li class="subtotal">Subtotal</li>
               </ul>
             </div>
+
             <div class="basket-product">
               <div class="item">
                 <div class="product-image">
@@ -41,6 +42,7 @@
               <div class="remove">
                 <button class="buttons buttonEliminar">Eliminar</button>
               </div>
+            
             </div>
             <div class="basket-product">
               <div class="item">
@@ -69,7 +71,9 @@
                 <div class="total-value final-value" id="basket-total">130.00</div>
               </div>
               <div>
-                <button class="buttons">Comprar</button>
+                <form action="/carrito/compra" method="POST">
+                <button type="submit" class="buttons">Comprar</button>
+                </form>
               </div>
             </div>
           </aside>

@@ -31,10 +31,24 @@
         US$<%=asics.precio%>
         <h2></h2>
         <br>
-        <a class="form1" href="/carrito">
-          <button class="buttons" type="submit">
+        <% if (locals.userLogged) { %>
+          <a class="form1">
+          <form action="/carrito/<%=asics.id_asic%>" method="POST" class="product-cart-form">
+        <input type="number" name="cantidad" value="1" required min="1">
+          <button class="buttons" type="submit" value="sumarAlCarrito">
            Comprar
           </button></a>
+          <% console.log(asics) %>
+        </a>
+        </form>
+          <% } %>
+          <br>
+          <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+            <a class="form1" href="/asic/editar/<%=asics.id_asic%>">
+              <button class="buttons">
+                Editar ASIC
+              </button></a>
+            <% } %>
         <br>
       </div>
     </div>

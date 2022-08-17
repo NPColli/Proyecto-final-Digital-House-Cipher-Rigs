@@ -219,7 +219,7 @@ body {
 .buttonCuenta{
   text-decoration: none; 
   color: white;
-  padding: 9px 42.5px;
+  
 }
 
 .buttons {
@@ -1183,4 +1183,11 @@ border-radius: 30px;
   .quantity-field {
     width: 80px;
   }
+}
+
+.adminview{
+display: flex;
+flex-direction: column;
+justify-items: center;
+
 }

@@ -17,6 +17,13 @@
   </video>
 
   <h1 class="h1form">Rigs para mineria | ETH/ETC </h1>
+  <div class="adminview">
+    <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+             <a class="form1" href="./asic/crear">
+               <button class="buttons">
+                 Agregar RIG
+               </button></a>
+             <% } %>
   <br>
   <section class="product"> 
     <button class="pre-btn"><img src="img/flecha.svg" alt=""></button>
@@ -28,6 +35,9 @@
               <img src="../img/rigs/<%=rigs[i].image %>" class="product-thumb" alt="">
                 <button class="card-btn"><a href="/rigs/<%=rigs[i].id_rigs%>">Ver más</button></a>
             </div>
+            <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+              <button class="button"><a href="/rigs/editar/<%=rigs[i].id_rigs%>">Editar RIG</button></a>
+              <% } %>
             <div class="product-info">
                 <h2 class="product-brand"><%=rigs[i].titulo %></h2>
                 <p class="product-short-description"><%=rigs[i].especificaciones %></p>
@@ -37,6 +47,8 @@
         <% } %>
     </div>
       </section>
+      else { %>
+        
   </main>
   <footer>
     <%- include('../partials/footer') %>

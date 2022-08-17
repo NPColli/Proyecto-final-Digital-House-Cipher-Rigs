@@ -19,7 +19,10 @@ module.exports = function (sequelize, DataTypes){
     } ,
     especificaciones: {
         type: DataTypes.STRING
-    }
+    },
+    status: {
+        type: DataTypes.INTEGER
+      },
     
     }
 
