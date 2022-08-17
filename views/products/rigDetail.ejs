@@ -42,6 +42,13 @@
                 Editar RIG
               </button></a>
             <% } %>
+            <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+              <a class="form1"> <form action="/rigs/destruir/<%=rigs.id_rigs%>" method="POST">
+                <button type="submit" class="buttons">
+                  Eliminar RIG DB
+                </button></a>
+              </form>
+              <% } %>
         <br>
       </div>
    

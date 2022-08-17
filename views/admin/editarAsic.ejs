@@ -17,8 +17,8 @@
     <main>
     <h1 class="h1form">Editar Asic</h1>
 
-    <form action="/asic/editar" method="POST" enctype="multipart/form-data" class="formulario">
-        <label class="labelForm" for="">Imagen</label>
+    <form action="/asic/editar/<%=asics.id_asic%>" method="POST" enctype="multipart/form-data" class="formulario">
+        <label class="labelForm" for="image">Imagen</label>
         <input type="file" name="image" accept=".png,.jpg" class="control2">
 
         <label class="labelForm" for="titulo">Titulo</label>
