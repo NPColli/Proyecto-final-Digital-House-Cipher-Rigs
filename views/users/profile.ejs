@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>Perfil de usuario</title>
   <%- include ('../partials/head', {title: "Profile"}) %>
+  </head>
   <body>
     <%- include ('../partials/header') %>
     <video class="video" preload="auto" autoplay loop muted>
@@ -9,16 +12,18 @@
       <source src="../../img/home.mp4" type="video/ogg">
   </video>
     <main class="profile">
-      <h1>Tu cuenta</h1>
-      <h2>Hola <%= user.nombre %></h2>
-     
-      <h2><%= user.email %></h2>
-      
-<br>
-      <button class="buttons"><a class="buttonCuenta" href="/login/editar/<%= user.user_id %>">Editar usuario </button>
-        <br>
-        <button class="buttons"><a class="buttonCuenta" href="/login/logout">Cerrar sesión</button>
-      </main>
+
+      <h1 class="h1form">Perfil</h1>
+
+      <h2>Bienvenido <%= user.nombre %></h2>
+      <br>
+      <h3><%= user.email %></h3>
+      <br><br>
+      <button class="buttons"><a class="buttonEdit" href="/login/editar/<%= user.user_id %>">Editar usuario</a></button>
+
+      <br>
+      <button class="buttons"><a class="buttonLogout" href="/login/logout">Cerrar sesión</a></button>
+    </main>
   </body>
   <%- include('../partials/footer') %>
 </html>

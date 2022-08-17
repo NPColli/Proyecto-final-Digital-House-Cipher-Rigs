@@ -194,8 +194,6 @@ body {
 
 .main {
   width: 100%;
-
-
 }
 
 
@@ -216,11 +214,91 @@ body {
   padding-bottom: 5%;
 }
 
-.buttonCuenta{
+.buttonRegister{
   text-decoration: none; 
   color: white;
-  
+  padding: 9px 34px;
 }
+
+.buttonRegister:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonEdit{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 24px;
+}
+
+.buttonEdit:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonLogout{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 25px;
+}
+
+.buttonLogout:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonActualizar{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 36px;
+}
+
+.buttonActualizar:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonEnviar{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 46px;
+}
+
+.buttonEnviar:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonPublicar{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 41px;
+}
+
+.buttonPublicar:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonCrear{
+  text-decoration: none; 
+  color: white;
+  text-align: center;
+  padding: 9px 24px;
+}
+
+.buttonCrear:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
 
 .buttons {
   border-color: white;
@@ -241,12 +319,6 @@ body {
   color: black;
   transition:
 	background-color, 0.3s,
-  color, 0.3s;
-}
-
-.buttonCuenta:hover{
-  color: black;
-  transition:
   color, 0.3s;
 }
 
@@ -272,7 +344,7 @@ body {
 
 .h1form {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 10px 0 10px;
   padding-top: 65px;
   padding-bottom: 20px;
 }
@@ -302,35 +374,6 @@ body {
   font-size: 14px;
   margin-bottom: 140px;
 }
-
-.Productos {
-  font-family: Didact Gothic;
-  font-size: 14px;
-  margin-bottom: 20%;
-  height: 30%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: stretch;
-  margin: auto;
-  align-items: center;
-  margin-top: 80px;
-}
-
-.Productos .article {
-  align-items: center;
-  align-self: stretch;
-  font-size: xx-large;
-}
-
-.article {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 
 
 
@@ -376,6 +419,11 @@ body {
   flex-direction: column;
   -webkit-box-pack: justify;
   justify-content: space-between;
+  font-size: 14px;
+  align-items: center;
+  margin: auto;
+  margin-top: 80px;
+  padding: 0 20px;
 }
 
 .espacioProducto {
@@ -391,7 +439,7 @@ padding-bottom: 15px;
 .textoProductos{
   height: 45%;
   width: auto;
-  max-height: 420px;
+  max-height: 465px;
   max-width: 420px;
   display: flex;
   flex-direction: column;
@@ -399,49 +447,18 @@ padding-bottom: 15px;
   color: #fff;
   border-radius: 20px;
   background-color: rgba(4, 4, 4, 0.571);
-  flex-wrap: wrap;
   padding: 15px;
 }
 
-.barraProductos{
-  height: 45%;
-  width: 1300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 100px;
+.h2Detail{
+  border-top: 1px solid #fff;
+  padding: 5px 0;
+  margin: 5px 0;
 }
 
-.imagenesBarraProductos {
-display: flex;
-text-align: center;
-justify-content: center;
-height: 150px;
-width: 300px;
-background-color: rgba(50, 50, 50, 0.705);
-border-radius: 30px;
+.textoEspec {
+  padding-bottom: 5px;
 }
-
-.flechaIzqProductos{
-  height: 50px;
-  width: 50px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-.flechaDerProductos{
-  height: 50px;
-  width: 50px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-
-
 
 
 
@@ -492,6 +509,20 @@ border-radius: 30px;
   bottom: 20px;
   left: 20px;
   margin: 0;
+}
+
+.slide a{
+  color: black;
+  border-color: transparent;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.slide a:hover {
+  border-color: black;
+  border: 1px solid;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all, 300ms;
 }
 
 
@@ -881,7 +912,6 @@ border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:10%;
 }
 
 .basket-module {
@@ -1030,6 +1060,13 @@ border-radius: 30px;
   text-align: left;
 }
 
+.adminview{
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+}
+
 
 
 
@@ -1041,6 +1078,10 @@ border-radius: 30px;
 @media screen and (min-width: 420px) and (max-width: 600px) {
   .slide{
     height: 60vh;
+  }
+
+  .textoProductos{
+    max-height: 380px;
   }
 }
 
@@ -1155,6 +1196,10 @@ border-radius: 30px;
   .products-details {
     width: 65%
   }
+
+  .textoProductos{
+    max-height: 355px;
+  }
 }
 
 
@@ -1183,11 +1228,8 @@ border-radius: 30px;
   .quantity-field {
     width: 80px;
   }
-}
-
-.adminview{
-display: flex;
-flex-direction: column;
-justify-items: center;
-
+  
+  .slide a{
+    text-decoration: none;
+  }
 }

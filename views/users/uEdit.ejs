@@ -20,31 +20,29 @@
     
     <form action="/login/editar/<%= user.user_id %>" method="POST" class="formulario">
       <label class="labelForm">Nombre</label>
-      <input type="text" class="control" name="nombre" placeholder="Ingrese su Nombre" class="<%= (locals.errors && errors.nombre) ? 'is-invalid' : null %> nombre"
+      <input type="text" class="control" name="nombre" placeholder="Nuevo nombre" class="<%= (locals.errors && errors.nombre) ? 'is-invalid' : null %> nombre"
       value="<%= user.nombre %>" >
       <% if (locals.errors && errors.nombre) { %> <span class="feedback">
     <%= errors.nombre.msg %> </span>
-<% } %>
-    </div>
+    <% } %>
+
       <label class="labelForm">Apellido</label>
-      <input type="text" class="control" name="apellido" placeholder="Ingrese su Apellido" class="<%= (locals.errors && errors.apellido) ? 'is-invalid' : null %> apellido"
+      <input type="text" class="control" name="apellido" placeholder="Nuevo apellido" class="<%= (locals.errors && errors.apellido) ? 'is-invalid' : null %> apellido"
       value="<%= user.apellido %>">
       <% if (locals.errors && errors.apellido) { %> <span class="feedback">
         <%= errors.apellido.msg %> </span>
     <% } %>
-    </div>
+
       <label class="labelForm">E-mail</label>
-      <input type="email" class="control" name="email" placeholder="Ingrese su Email" class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %> email"
+      <input type="email" class="control" name="email" placeholder="Ingrese su E-mail" class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %> email"
       value="<%= user.email %>">
       <% if (locals.errors && errors.email) { %> <span class="feedback">
         <%= errors.email.msg %> </span>
     <% } %>
-    </div>
-      
-    </div>
-<br>
-      <div><button type="submit" class="buttons" >Actualizar</button>
-       <button class="buttons"><a class="buttonCuenta" href="/login/logout">Cerrar sesión</button>
+
+    <br>
+      <div><button class="buttons"><a class="buttonActualizar">Actualizar</a></button>
+      <button class="buttons"><a class="buttonLogout" href="/login/logout">Cerrar sesión</a></button>
 
       </div>
 

@@ -23,10 +23,10 @@
       <div class="mensaje">
       <input type="text" class="control" name="email" placeholder="Ingrese su dirección de E-mail" class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %> form-control email"
       value="<%= (locals.oldData) ? oldData.email : null %>" required>
+      </div>
       <% if (locals.errors && errors.email) { %>
         <span class="feedback"> <%= errors.email.msg %> </span>
         <% } %>
-      </div>
       <label class="labelForm">Contraseña</label>
       <input type="password" class="control" name="password" placeholder="Ingrese su contraseña" class="<%= (locals.errors && errors.password) ? 'is-invalid' : null %> form-control password" required>
       <% if (locals.errors && errors.password) { %>
@@ -39,7 +39,7 @@
       <br><br>
       <p class="regist">¿Aún no tienes usuario?</p>
       <br>
-      <button class="buttons" action='register' type="submit"><a class="buttonCuenta" href="login/register">Regístrate</a></button>
+      <button class="buttons" action='register' type="submit"><a class="buttonRegister" href="login/register">Regístrate</a></button>
 
     </form>
   </main>
