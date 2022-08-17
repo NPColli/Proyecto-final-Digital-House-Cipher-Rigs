@@ -28,13 +28,19 @@
         <h2 class="h2Detail">Precio:</h2>
         <h3>US$<%=rigs.precio%></h3>
         <br>
-        <a class="form1" href="/carrito">
-          <button class="buttons" type="submit">
-            Comprar
-          </button></a>
+        <% if (locals.userLogged) { %>
+          <input class="quantity-field" type="number" name="cantidad" value="1" required min="1">
           <br>
+          <form action="/carrito/<%=rigs.id_rig%>" method="POST" class="product-cart-form">
+          <button class="buttons" type="submit" value="sumarAlCarrito">
+           Comprar
+          </button>
+          <% console.log(rigs) %>
+        </form>
+          <% } %>
+          <br><br>
           <% if (locals.userLogged && locals.userLogged.rol===0) { %>
-            <a class="form1" href="/rigs/editar/<%=rigs.id_rigs%>">
+            <a class="form1" href="/rigs/editar/<%=rigs.id_rig%>">
               <button class="buttons">
                 Editar RIG
               </button></a>

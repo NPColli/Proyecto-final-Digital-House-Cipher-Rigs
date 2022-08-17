@@ -439,7 +439,7 @@ padding-bottom: 15px;
 .textoProductos{
   height: 45%;
   width: auto;
-  max-height: 420px;
+  max-height: 465px;
   max-width: 420px;
   display: flex;
   flex-direction: column;
@@ -447,7 +447,6 @@ padding-bottom: 15px;
   color: #fff;
   border-radius: 20px;
   background-color: rgba(4, 4, 4, 0.571);
-  flex-wrap: wrap;
   padding: 15px;
 }
 
@@ -1080,6 +1079,10 @@ align-items: center;
   .slide{
     height: 60vh;
   }
+
+  .textoProductos{
+    max-height: 380px;
+  }
 }
 
 
@@ -1192,6 +1195,10 @@ align-items: center;
 
   .products-details {
     width: 65%
+  }
+
+  .textoProductos{
+    max-height: 355px;
   }
 }
 
