@@ -24,12 +24,9 @@
         <h1><%=rigs.titulo%></h1>
         <br>
         <h2>Especificaciones:</h2>
-        <%=rigs.especificaciones%>
-        <h3></h3>
-        <br>
-        <h2>Precio:</h2>
-        US$<%=rigs.precio%>
-        <h2></h2>
+        <p class="textoEspec"><%=rigs.especificaciones%></p>
+        <h2 class="h2Detail">Precio:</h2>
+        <h3>US$<%=rigs.precio%></h3>
         <br>
         <a class="form1" href="/carrito">
           <button class="buttons" type="submit">
@@ -37,12 +34,11 @@
           </button></a>
         <br>
       </div>
-   
+    </div>
   </main>
   <footer>
     <%- include('../partials/footer') %>
   </footer>
-
 </body>
 
 </html>
