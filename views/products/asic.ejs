@@ -17,16 +17,12 @@
   </video>
 
   <h1 class="h1form">ASIC para BTC/BCH/BSV | SHA256  </h1>
-  <br>
-<div class="adminview">
-   <% if (locals.userLogged && locals.userLogged.rol===0) { %>
-            <a class="form1" href="./asic/crear">
-              <button class="buttons">
-                Agregar ASIC
-              </button></a>
-            <% } %>
-          </div>
-          <br>
+  <div class="adminview">
+    <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+      <button class="buttons"><a class="buttonCrear" href="./asic/crear">Agregar ASIC</a></button>
+             <% } %>
+            </div>
+          <br><br>
   <section class="product"> 
     <button class="pre-btn"><img src="img/flecha.svg" alt=""></button>
     <button class="nxt-btn"><img src="img/flecha.svg" alt=""></button>
@@ -34,7 +30,7 @@
       <% for (let i = 0; i < asics.length; i++) { %>
         <div class="product-card">
             <div class="product-image2">
-              <img src="../img/asic/<%=asics[i].image %>" class="product-thumb" alt="">
+              <img src="../img/asic/<%=asics[i].image %>" class="product-thumb" alt="La imagen no pudo cargar correctamente">
                 <button class="card-btn"><a href="/asic/<%=asics[i].id_asic%>">Ver más</button></a>
             </div>
             <% if (locals.userLogged && locals.userLogged.rol===0) { %>

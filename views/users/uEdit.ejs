@@ -33,6 +33,13 @@
         <%= errors.apellido.msg %> </span>
     <% } %>
 
+      <label class="labelForm">E-mail</label>
+      <input type="email" class="control" name="email" placeholder="Ingrese su E-mail" class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %> email"
+      value="<%= user.email %>">
+      <% if (locals.errors && errors.email) { %> <span class="feedback">
+        <%= errors.email.msg %> </span>
+    <% } %>
+
     <br>
       <div><button class="buttons"><a class="buttonActualizar">Actualizar</a></button>
       <button class="buttons"><a class="buttonLogout" href="/login/logout">Cerrar sesión</a></button>

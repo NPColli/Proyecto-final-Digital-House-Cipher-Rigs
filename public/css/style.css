@@ -194,8 +194,6 @@ body {
 
 .main {
   width: 100%;
-
-
 }
 
 
@@ -275,6 +273,32 @@ body {
   transition:
   color, 0.3s;
 }
+
+.buttonPublicar{
+  text-decoration: none; 
+  color: white;
+  padding: 9px 41px;
+}
+
+.buttonPublicar:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
+.buttonCrear{
+  text-decoration: none; 
+  color: white;
+  text-align: center;
+  padding: 9px 24px;
+}
+
+.buttonCrear:hover{
+  color: black;
+  transition:
+  color, 0.3s;
+}
+
 
 .buttons {
   border-color: white;
@@ -1040,7 +1064,8 @@ padding-bottom: 15px;
 .adminview{
 display: flex;
 flex-direction: column;
-justify-items: center;
+text-align: center;
+align-items: center;
 }
 
 
