@@ -18,9 +18,9 @@
           <div class="basket">
             <div class="basket-labels">
               <ul class="basketUl">
-                <li class="item item-heading">Item</li>
-                <li class="price">Price</li>
-                <li class="quantity">Quantity</li>
+                <li class="item item-heading">Productos</li>
+                <li class="price">Precio</li>
+                <li class="quantity">Cant.</li>
                 <li class="subtotal">Subtotal</li>
               </ul>
             </div>
@@ -30,9 +30,7 @@
                   <img src="img/bitcoin-miner-s19-xp.png" alt="Placholder Image 2" class="product-frame">
                 </div>
                 <div class="product-details">
-                  <h1 class="h1-product"><strong><span class="item-quantity">4</span> x Eliza J</strong> Lace Sleeve Cuff Dress</h1>
-                  <p class="item-p"><strong>Navy, Size 18</strong></p>
-                  <p class="item-p">Product Code - 232321939</p>
+                    <strong>Bitcoin Miner S19 XP</strong>
                 </div>
               </div>
               <div class="price">26.00</div>
@@ -41,7 +39,7 @@
               </div>
               <div class="subtotal">104.00</div>
               <div class="remove">
-                <button>Remove</button>
+                <button class="buttons buttonEliminar">Eliminar</button>
               </div>
             </div>
             <div class="basket-product">
@@ -50,9 +48,7 @@
                   <img src="img/bitcoin-miner-s19.png" alt="Placholder Image 2" class="product-frame">
                 </div>
                 <div class="product-details">
-                  <h1 class="h1-product"><strong><span class="item-quantity">1</span> x Whistles</strong> Amella Lace Midi Dress</h1>
-                  <p class="item-p"><strong>Navy, Size 10</strong></p>
-                  <p class="item-p">Product Code - 232321939</p>
+                  <p><strong>Bitcoin Miner S19</strong></p>
                 </div>
               </div>
               <div class="price">26.00</div>
@@ -61,23 +57,19 @@
               </div>
               <div class="subtotal">26.00</div>
               <div class="remove">
-                <button>Remove</button>
+                <button class="buttons buttonEliminar">Eliminar</button>
               </div>
             </div>
           </div>
           <aside class="summaryCard">
             <div class="summary">
-              <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
-              <div class="summary-subtotal">
-                <div class="subtotal-title">Subtotal</div>
-                <div class="subtotal-value final-value" id="basket-subtotal">130.00</div>
-              </div>
+              <div class="summary-total-items"><span class="total-items"></span> Productos agregados</div>
               <div class="summary-total">
                 <div class="total-title">Total</div>
                 <div class="total-value final-value" id="basket-total">130.00</div>
               </div>
-              <div class="summary-checkout">
-                <button class="checkout-cta">Go to Secure Checkout</button>
+              <div>
+                <button class="buttons">Comprar</button>
               </div>
             </div>
           </aside>
@@ -88,7 +80,7 @@
 
     <script>
         /* Set values + misc */
-var fadeTime = 300;
+var fadeTime = 200;
 
 /* Assign actions */
 $('.quantity input').change(function() {
@@ -128,9 +120,9 @@ function recalculateCart(onlyTotal) {
       $('#basket-subtotal').html(subtotal.toFixed(2));
       $('#basket-total').html(total.toFixed(2));
       if (total == 0) {
-        $('.checkout-cta').fadeOut(fadeTime);
+        $('.buttons').fadeOut(fadeTime);
       } else {
-        $('.checkout-cta').fadeIn(fadeTime);
+        $('.buttons').fadeIn(fadeTime);
       }
       $('.final-value').fadeIn(fadeTime);
     });
@@ -154,8 +146,6 @@ function updateQuantity(quantityInput) {
     });
   });
 
-  productRow.find('.item-quantity').text(quantity);
-  updateSumItems();
 }
 
 function updateSumItems() {

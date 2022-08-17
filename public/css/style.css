@@ -177,6 +177,8 @@ transform: none;
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -223,10 +225,15 @@ body {
 .buttons {
   border-color: white;
   color: white;
-  width: 150px;
+  width: 135px;
   border-radius: 15px;
   height: 34px;
   background-color: rgba(0, 0, 0, 0);
+}
+
+.buttonEliminar {
+  width: 70px;
+  height: 25px;
 }
 
 .buttons:hover{
@@ -877,6 +884,159 @@ border-radius: 30px;
   margin:10%;
 }
 
+.basket-module {
+  width: 100%;
+}
+
+.basket-labels {
+  display: none;
+}
+
+.basket-product {
+  float: left;
+  border-bottom: 2px solid #fff;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.basket {
+  float: left;
+  padding: 40px 15px 0px 15px;
+  width: 100%;
+}
+
+.item {
+  float: left;
+  
+  width: 100%;
+}
+
+.price {
+  float: left;
+  width: 33%;
+}
+
+.quantity {
+  float: left;
+  width: 34%;
+}
+
+.subtotal {
+  float: left;
+  width: 33%;
+  text-align: right;
+}
+
+.product-image {
+  float: left;
+  width: 40%;
+}
+
+.product-details {
+  float: left;
+  width: 60%;
+  padding: 0 1rem;
+  font-size: 22px;
+}
+
+.subtotal-value,
+.total-value {
+  text-align: right;
+  float: left;
+  width: 50%;
+}
+
+.price2:before,
+.price:before,
+.subtotal:before,
+.subtotal-value:before,
+.total-value:before {
+  content: 'US$ ';
+}
+
+.hide {
+  display: none;
+}
+
+.mainCart {
+  overflow: hidden;
+}
+
+.basketUl li {
+  display: inline-block;
+  margin: 7px 0;
+}
+
+.basketUl li.price:before,
+.basketUl li.subtotal:before {
+  content: '';
+}
+
+.remove {
+  float: right;
+  margin-top: 15px;
+}
+
+.item-heading {
+  text-align: center;
+}
+
+.product-frame {
+  width: 100%;
+}
+
+.quantity-field {
+  background-color: #000000;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 1px;
+  width: 80%;
+  color: #fff;
+  text-align: center;
+}
+
+.summaryCard {
+  padding: 64px 15px 0;
+  float: right;
+  width: 100%;
+  text-align: -webkit-center;
+}
+
+.summary {
+  background-color: #000000ba;
+  padding: 15px;
+  border-radius: 20px;
+  max-width: 250px;
+}
+
+.summary-total-items {
+  text-align: center;
+}
+
+.summary-total {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  clear: both;
+  margin: 20px 0;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.subtotal-title,
+.total-title {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 420px) and (max-width: 600px) {
   .slide{
@@ -884,8 +1044,8 @@ border-radius: 30px;
   }
 }
 
-@media screen and (min-width: 530px) and (max-width: 600px) {
 
+@media screen and (min-width: 530px) and (max-width: 600px) {
   .container{
     display: flex;
   }
@@ -903,17 +1063,20 @@ border-radius: 30px;
     transform: translateY(-3%);
     transition: all 400ms;
   }
+
   .slide.active h3{
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
   }
 }
 
+
 @media only screen and (max-width: 599px) {
   .desktopnav {
     display: none;
   }
 }
+
 
 @media only screen and (min-width: 600px) {
   .menuToggle {
@@ -945,11 +1108,63 @@ border-radius: 30px;
     transform: translateY(-3%);
     transition: all 400ms;
   }
+
   .slide.active h3{
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
   }
+
+  .summaryCard {
+    width: 30%;
+  }
+  
+  .basket {
+    width: 70%;
+  }
+  
+  .basket-labels {
+    display: block;
+    width: 100%;
+    float: left;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    margin-top: 25px;
+  }
+  
+  .item {
+    width: 55%;
+  }
+  
+  .product-image {
+    width: 35%;
+  }
+  
+  .product-details {
+    width: 65%;
+  }
+  
+  .price,
+  .subtotal {
+    width: 15%;
+  }
+  
+  .quantity {
+    width: 15%;
+  }
+
+  .products-details {
+    width: 65%
+  }
 }
+
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .summaryCard {
+    padding: 64px 15px 0 0;
+  }
+
+}
+
 
 @media only screen and (min-width: 992px) {
   .altus {
@@ -961,296 +1176,11 @@ border-radius: 30px;
     text-decoration: none;
   }
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.item-p {
-  margin: 0.75rem 0 0;
-}
-
-.h1-product {
-  font-size: 0.75rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-.basket-module,
-.basket-labels,
-.basket-product {
-  width: 100%;
-}
-
-.basket,
-.basket-labels,
-.item,
-.price,
-.quantity,
-.subtotal,
-.basket-product,
-.product-image,
-.product-details {
-  float: left;
-}
-
-.price:before,
-.subtotal:before,
-.subtotal-value:before,
-.total-value:before {
-  content: '£';
-}
-
-.hide {
-  display: none;
-}
-
-.mainCart {
-  overflow: hidden;
-}
-
-.basket,
-.summaryCard {
-  padding: 0 1rem;
-  padding-top: 60px;
-}
-
-.basket {
-  width: 70%;
-}
-
-
-.basket-labels {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin-top: 1.625rem;
-}
-
-.basketUl {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.basketUl li {
-  display: inline-block;
-  margin: 0.625rem 0;
-}
-
-.basketUl li.price:before,
-.basketUl li.subtotal:before {
-  content: '';
-}
-
-.item {
-  width: 55%;
-}
-
-.price,
-.quantity,
-.subtotal {
-  width: 15%;
-}
-
-.subtotal {
-  text-align: right;
-}
-
-.remove {
-  bottom: 1.125rem;
-  float: right;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  width: 45%;
-}
-
-.remove button {
-  background-color: transparent;
-  color: #777;
-  float: none;
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
-.item-heading {
-  padding-left: 4.375rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.basket-product {
-  border-bottom: 1px solid #ccc;
-  padding: 1rem 0;
-  position: relative;
-  height: 40vh;
-}
-
-.product-image {
-  width: 35%;
-}
-
-.product-details {
-  width: 65%;
-}
-
-.product-frame {
-  border: 1px solid #aaa;
-  width: 100%;
-}
-
-.product-details {
-  padding: 0 1.5rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.quantity-field {
-  background-color: #ccc;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  font-size: 0.625rem;
-  padding: 2px;
-  width: 3.75rem;
-}
-
-.summaryCard {
-  float: right;
-  position: relative;
-  width: 30%;
-}
-
-.summary {
-  background-color: #eee;
-  border: 1px solid #aaa;
-  padding: 1rem;
-  position: fixed;
-  width: 250px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.summary-total-items {
-  color: #666;
-  font-size: 0.875rem;
-  text-align: center;
-}
-
-.summary-subtotal,
-.summary-total {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  clear: both;
-  margin: 1rem 0;
-  overflow: hidden;
-  padding: 0.5rem 0;
-}
-
-.subtotal-title,
-.subtotal-value,
-.total-title,
-.total-value {
-  color: #111;
-  float: left;
-  width: 50%;
-}
-
-.subtotal-value,
-.total-value {
-  text-align: right;
-}
-
-.total-title {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.summary-checkout {
-  display: block;
-}
-
-.checkout-cta {
-  display: block;
-  float: none;
-  font-size: 0.75rem;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0.625rem 0;
-  width: 100%;
-}
-
-@media screen and (max-width: 640px) {
-  .summaryCard,
-  .basket,
-  .summary,
-  .item,
-  .remove {
-    width: 100%;
+  .products-details {
+    padding: 0 1.5rem;
   }
-  .basket-labels {
-    display: none;
-  }
-  .item {
-    margin-bottom: 1rem;
-  }
-  .product-image {
-    width: 40%;
-  }
-  .product-details {
-    width: 60%;
-  }
-  .price,
-  .subtotal {
-    width: 33%;
-  }
-  .quantity {
-    text-align: center;
-    width: 34%;
-  }
+
   .quantity-field {
-    float: none;
-  }
-  .remove {
-    bottom: 0;
-    text-align: left;
-    margin-top: 0.75rem;
-    position: relative;
-  }
-  .remove button {
-    padding: 0;
-  }
-  .summary {
-    margin-top: 1.25rem;
-    position: relative;
-  }
-}
-
-@media screen and (min-width: 641px) and (max-width: 960px) {
-  .summarycard {
-    padding: 0 1rem 0 0;
-  }
-  .summary {
-    width: 28%;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .mainCart {
-    width: 100%;
-  }
-  .product-details {
-    padding: 0 1rem;
+    width: 80px;
   }
 }
