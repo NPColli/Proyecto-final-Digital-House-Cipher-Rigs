@@ -34,16 +34,6 @@
           </button></a>
         </a>
           <br>
-        <% if (locals.userLogged) { %>
-          <input class="quantity-field" type="number" name="cantidad" value="1" required min="1">
-          <br>
-          <form action="/carrito/<%=asics.id_asic%>" method="POST" class="product-cart-form">
-          <button class="buttons" type="submit" value="sumarAlCarrito">
-           Comprar
-          </button>
-          <% console.log(asics) %>
-        </form>
-          <% } %>
           <br><br>
           <% if (locals.userLogged && locals.userLogged.rol===0) { %>
             <a class="form1" href="/asic/editar/<%=asics.id_asic%>">
