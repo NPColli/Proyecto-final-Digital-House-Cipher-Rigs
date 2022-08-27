@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `cypherrigs`.`asics` (
   `cantidad` SMALLINT(10) NULL DEFAULT NULL,
   PRIMARY KEY (`id_asic`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 7
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -61,7 +61,6 @@ CREATE TABLE IF NOT EXISTS `cypherrigs`.`categoria` (
   `status` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -76,7 +75,6 @@ CREATE TABLE IF NOT EXISTS `cypherrigs`.`contacto` (
   `mensaje` VARCHAR(350) NULL DEFAULT NULL,
   PRIMARY KEY (`idcontacto`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 24
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -93,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `cypherrigs`.`product_history` (
   `createdAt` TIMESTAMP NULL DEFAULT NULL,
   `updatedAt` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_buy_product_history_idx` (`buy_history_id` ASC) VISIBLE,
+  INDEX `fk_buy_product_history_idx` (`buy_history_id` ASC),
   CONSTRAINT `fk_buy_product_history`
     FOREIGN KEY (`buy_history_id`)
     REFERENCES `cypherrigs`.`buy_history` (`id`)
@@ -134,9 +132,9 @@ CREATE TABLE IF NOT EXISTS `cypherrigs`.`users` (
   `rol` TINYINT(1) NOT NULL,
   `categoria` TINYINT(1) NOT NULL,
   PRIMARY KEY (`user_id`),
-  UNIQUE INDEX `email` (`email` ASC) VISIBLE)
+  UNIQUE INDEX `email` (`email` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb4;
 
 

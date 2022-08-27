@@ -2,8 +2,8 @@ USE cypherrigs;
 
 LOCK TABLES `asics` WRITE;
 INSERT INTO `asics` (`id_asic`,`titulo`,`precio`,`especificaciones`,`image`,`status`,`cartId`,`cantidad`) VALUES (1,'Bitcoin Miner S19 Pro',6,'Hashrate, TH/s 110 ± 3%\r\nPotencia en la pared','group-1660287658969.png',NULL,NULL,NULL);
-INSERT INTO `asics` (`id_asic`,`titulo`,`precio`,`especificaciones`,`image`,`status`,`cartId`,`cantidad`) VALUES (4,'Bitcoin Miner T19',1596,'','group-1660773892476.png',1,NULL,NULL);
-INSERT INTO `asics` (`id_asic`,`titulo`,`precio`,`especificaciones`,`image`,`status`,`cartId`,`cantidad`) VALUES (6,'Bitcoin Miner S15 WT Cooling',1500,'Function: BTC','group-1660772011213.png',1,NULL,NULL);
+INSERT INTO `asics` (`id_asic`,`titulo`,`precio`,`especificaciones`,`image`,`status`,`cartId`,`cantidad`) VALUES (2,'Bitcoin Miner T19',1596,'','group-1660773892476.png',1,NULL,NULL);
+INSERT INTO `asics` (`id_asic`,`titulo`,`precio`,`especificaciones`,`image`,`status`,`cartId`,`cantidad`) VALUES (3,'Bitcoin Miner S15 WT Cooling',1500,'Function: BTC','group-1660772011213.png',1,NULL,NULL);
 UNLOCK TABLES;
 
 LOCK TABLES `rigs` WRITE;
@@ -15,7 +15,6 @@ INSERT INTO `rigs` (`id_rigs`,`titulo`,`precio`,`especificaciones`,`image`,`stat
 
 UNLOCK TABLES;
 LOCK TABLES `users` WRITE;
-INSERT INTO `users` (`user_id`,`email`,`nombre`,`apellido`,`password`,`rol`,`categoria`) VALUES (1,'test@admin.com','test','test','$2a$10$OMnYjkCZGXtmBANmBJeG3O5x0Ce8R2PwQpUvhj',1,0);
-INSERT INTO `users` (`user_id`,`email`,`nombre`,`apellido`,`password`,`rol`,`categoria`) VALUES (2,'test35@admin.com','test','testadmin','$2a$10$78Re1sPi4PJkDOi2BSksOeDb.Cnx59X6dXsbBYa1GtKcNZ0vKmJcS',1,0);
-INSERT INTO `users` (`user_id`,`email`,`nombre`,`apellido`,`password`,`rol`,`categoria`) VALUES (3,'alansergiobruno@gmail.com','alan','bruno','$2a$10$T/4q0aveVFbSZryGTpBkqOXWp5PoQ53pl1vdWHdLaM7UHsB5Tttbq',0,0);
+INSERT INTO `users` (`user_id`,`email`,`nombre`,`apellido`,`password`,`rol`,`categoria`) VALUES (1,'admin@cipher.com','Admin','Cipher','$2a$10$6zzeidnkJ78T671gI4bK5uJXi8eWlnX7OssX/g/ePUC2DSv2xibTa',0,0);
+INSERT INTO `users` (`user_id`,`email`,`nombre`,`apellido`,`password`,`rol`,`categoria`) VALUES (2,'usuario@cipher.com','Usuario','Cipher','$2a$10$/ElScWCCUVmmgR04vVzc4.IzdNJylUSB5d7JvkzWzru6CMLs10pdO',1,0);
 UNLOCK TABLES;
