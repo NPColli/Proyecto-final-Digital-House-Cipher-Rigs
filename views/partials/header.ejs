@@ -11,6 +11,9 @@
         <div> <a class="palabrasNav" href="/rigs"> Rigs </a> </div>
         <div> <a class="palabrasNav" href="/nosotros"> Nosotros </a> </div>
         <div> <a class="palabrasNav" href="/contacto"> Contacto </a> </div>
+        <% if (locals.userLogged && locals.userLogged.rol===0) { %>
+            <div> <a class="palabrasNav" href="/dashboard"> Dashboard </a> </div>
+                 <% } %>
         <% if (locals.isLogged) { %>
         <div class="iconos">
                 <a href="/login/profile/:id"> <img class="login" src="/img/User icon.png" alt=""></a>

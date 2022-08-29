@@ -26,6 +26,7 @@ const asic = require('./src/routes/asics');
 const rig = require('./src/routes/rigs');
 const user = require('./src/routes/usuarios');
 const carrito = require('./src/routes/carrito');
+const dashboard = require('./src/routes/dashboard');
 
 app.use('/', index); //localhost3000
 app.use('/nosotros', nosotros); //localhost3000/nosotros
@@ -36,6 +37,7 @@ app.use('/carrito', carrito); //localhost3000/carrito
 app.use('/asic', asic); //localhost3000/asic
 app.use('/rigs', rig); //localhost3000/rigs
 
+app.use('/dashboard', dashboard); //localhost3000/dashboard
 
 app.use('/login', user); //localhost3000/login
 
