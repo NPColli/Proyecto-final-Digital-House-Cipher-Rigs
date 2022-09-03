@@ -6,6 +6,7 @@ const logMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/logMiddlew
 const userLoggedMiddleware = require('../-grupo_1_CipherRigs/src/middlewares/userLoggedMiddleware');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const cors = require('cors')
 
 app.use(express.static('public'));
 app.use(express.static('views'));
@@ -17,6 +18,8 @@ app.use(cookies());
 app.use(logMiddleware);
 app.use(userLoggedMiddleware);
 app.set("view engine", "ejs");
+app.use(cors());
+
 
 //Rutas
 const index = require('./src/routes/main');
