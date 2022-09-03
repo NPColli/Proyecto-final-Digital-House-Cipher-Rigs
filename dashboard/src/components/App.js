@@ -70,7 +70,7 @@ class App extends Component {
       asicList: data.data,
     });
   };
-
+  
   mostrarInfoRig = (data) => {
     //console.log(data.data);
     this.setState({

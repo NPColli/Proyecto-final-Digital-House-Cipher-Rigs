@@ -21,8 +21,8 @@ function AsicTable(props) {
                 <tr>
                   <th>ID</th>
                   <th>Nombre</th>
-                  <th>Precio</th>
                   <th>Especificaciones</th>
+                  <th>Precio</th>
                 </tr>
               </thead>
               <tbody>
