@@ -13,15 +13,16 @@ Integrantes:
 Trello: https://trello.com/b/mi2O0AIW/cipherrigs
 
 CÓMO EJECUTAR EL PROYECTO CIPHER:
+
 Precondiciones: Tener instalado en la computadora: VSCode, Xampp y MySql Workbench.
 
 0- Ejecutar Xampp y hacer clic en "start" al servicio "MySql"
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/xampp.JPG?raw=true)
 
 1- Abrir el gestor de base de datos instalado, realizar una nueva conexión:
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/mysql.JPG?raw=true)
 
 2- Abrir un nuevo tab para ingresar queries. Ejecutar los scripts para crear la estructura de la base de datos y el contenido. Los scripts se encuentran en las rutas del proyecto:
 
@@ -29,7 +30,7 @@ grupo_1_CipherRigs/database/cypherrigs.sql
 
 grupo_1_CipherRigs/database/cypherdata.sql
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/data.JPG?raw=true)
 
 3- Abrir VSCode. En la carpeta donde se desee descargar el proyecto, realizar clic derecho en "open in integrated terminal".
 
@@ -41,28 +42,29 @@ git clone https://github.com/albruno-dev/-grupo_1_CipherRigs.git
 
 npm install
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/npminstall.JPG?raw=true)
 
 6- Iniciar el servidor ejecutando el comando:
 
 npm start
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/npmstart.JPG?raw=true)
 
 7- Para visualizar el proyecto, abrir un browser y en la barra de direcciones ingresar a:
 
 http://localhost:3000/
 
 CÓMO EJECUTAR EL PROYECTO DASHBOARD:
+
 Precondiciones: Tener ejecutando el proyecto CIPHER (ver sección anterior)
 0- Instalar las dependencias utilizadas en el proyecto dashboard. Utilizando la consola, posicionarse en el directorio "/grupo_1_CipherRigs/dashboard" y ejecutar el comando:
 
 npm install
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/npminstall.JPG?raw=true)
 
 1- Para iniciar el servidor ejecutar el comando:
 
 npm start
 
-![imagen]()
+![imagen](https://github.com/albruno-dev/-grupo_1_CipherRigs/blob/main/public/img/tutorial/npmstart.JPG?raw=true)
