@@ -8,7 +8,7 @@ function LastRigInDB(props) {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h6 className="m-0 font-weight-bold text-primary">
-              Last Rig in Data Dase
+              Último RIG en la base de datos
             </h6>
           </div>
           <div className="card-body">

@@ -86,6 +86,7 @@ class App extends Component {
       <>
         <div>
           <div>
+            
             {/* //  <!-- PageContent --> */}
             <div className="container">
               {/* //  <!-- PageFeatures --> */}
@@ -99,10 +100,13 @@ class App extends Component {
             <div id="content">
               <Topbar />
               {/* <!-- Begin Page Content --> */}
+              
               <div className="container-fluid">
+          
                 {/* <!-- Page Heading --> */}
+                
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                  <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                  <h1 className="h3 mb-0 text-gray-800">CIPHER Dashboard</h1>
                 </div>
                 <Routes>
                   <Route

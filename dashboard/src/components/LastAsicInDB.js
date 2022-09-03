@@ -8,7 +8,7 @@ function LastAsicInDB(props) {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h6 className="m-0 font-weight-bold text-primary">
-              Last Asic in Data Dase
+              Último ASIC en la base de datos
             </h6>
           </div>
           <div className="card-body">

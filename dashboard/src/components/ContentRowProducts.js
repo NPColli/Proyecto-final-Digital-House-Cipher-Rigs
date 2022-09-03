@@ -2,6 +2,7 @@ import ContentRow from "./ContentRow";
 
 /*  Componente creado para contener los 3 ContentRow y linkearlos juntos,
  Hace un pasa mano con los datos */
+
 function ContentRowProducts(props) {
    let users = {
      total: props.usersTotal,

@@ -13,9 +13,8 @@ function Sidebar(props) {
         href="/"
       >
         <div className="sidebar-brand-icon">
-          <i className="fas fa-chart-line"></i>
+        <img className="logo" src="./CIPHER.png"></img>
         </div>
-        <div className="sidebar-brand-text mx-3">CIPHER</div>
       </a>
 
       {/* <!-- Divider --> */}
@@ -36,7 +35,7 @@ function Sidebar(props) {
       </li>
       <li className="nav-item active">
         <Link to="/UsersTable" exact="true" className="nav-link collapsed">
-          <i className="fas fa-fw fa-tachometer-alt"></i>
+        <img src="./User icon.png"className="fas fa-fw fa-chart-area"></img> 
           <span>Listado de Usuarios</span>
         </Link>
       </li>
@@ -45,7 +44,7 @@ function Sidebar(props) {
       <hr className="sidebar-divider"></hr>
 
       {/* <!-- Heading --> */}
-      <div className="sidebar-heading">Actions</div>
+      <div className="sidebar-heading">Acciones</div>
 
       {/* <!-- Nav Item - Pages --> */}
       <li className="nav-item">
@@ -54,7 +53,7 @@ function Sidebar(props) {
           exact="true"
           className="nav-link collapsed"
         >
-          <i className="fas fa-fw fa-folder"></i>
+          <i className="fas fa-fw fa-chart-area"></i>
           <span>Último RIG</span>
         </Link>
       </li>
@@ -65,6 +64,20 @@ function Sidebar(props) {
           <i className="fas fa-fw fa-chart-area"></i>
           <span>Último ASIC</span>
         </Link>
+      </li>
+      {/* <!-- Nav Item - Charts --> */}
+      <li className="nav-item">
+        <a href="http://localhost:3000/rigs/crear"className="nav-link" >
+          <img src="./add-icon.png"className="fas fa-fw fa-chart-area"></img> 
+          <span>Crear RIG</span>
+          </a>
+      </li>
+      {/* <!-- Nav Item - Charts --> */}
+      <li className="nav-item">
+        <a href="http://localhost:3000/asic/crear"className="nav-link" >
+        <img src="./add-icon.png"className="fas fa-fw fa-chart-area"></img> 
+          <span>Crear ASIC</span>
+          </a>
       </li>
 
   

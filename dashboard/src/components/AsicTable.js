@@ -5,7 +5,7 @@ function AsicTable(props) {
     <>
       <h1 className="h3 mb-2 text-gray-800">
         {" "}
-        All the Asic in the Database
+        Todos los ASIC de la base de datos
       </h1>
 
       <div className="card shadow mb-4">

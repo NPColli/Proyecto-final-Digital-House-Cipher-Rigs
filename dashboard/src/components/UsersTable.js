@@ -3,7 +3,7 @@ import UserRow from "./UserRow";
 function UsersTable(props) {
   return (
     <>
-      <h1 className="h3 mb-2 text-gray-800"> All the users in the Database</h1>
+      <h1 className="h3 mb-2 text-gray-800"> Todos los usuarios de la base de datos</h1>
 
       <div className="card shadow mb-4">
         <div className="card-body">

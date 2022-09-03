@@ -1,4 +1,4 @@
-import logo from "../assets/images/dummy-avatar.jpg";
+import logo from "../assets/images/dummy-avatar.png";
 
 function Topbar(props) {
   return (
