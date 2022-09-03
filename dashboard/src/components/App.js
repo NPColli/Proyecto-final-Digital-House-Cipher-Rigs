@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.traerInfoUsers(), this.traerInfoRig(), this.traerInfoAsic();
+    this.traerInfoUsers(); this.traerInfoRig(); this.traerInfoAsic();
   }
   
   mostrarInfoUsers = (data) => {

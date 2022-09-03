@@ -26,7 +26,7 @@ function LastRigInDB(props) {
             <h6>
               <a
                 className="nav-link"
-                href={"http://localhost:3000/rigs/" + props.id}
+                href={"http://localhost:3000/rigs/" + props.id_rigs}
               >
                 <span>Ver detalles...</span>
               </a>

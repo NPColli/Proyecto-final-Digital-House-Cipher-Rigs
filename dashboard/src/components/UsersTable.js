@@ -17,8 +17,8 @@ function UsersTable(props) {
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Email</th>
                   <th>Nombre</th>
+                  <th>E-mail</th>
                 </tr>
               </thead>
               <tbody>
