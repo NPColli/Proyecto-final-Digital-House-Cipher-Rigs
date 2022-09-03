@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.traerInfoUsers(), this.traerInfoRig(), this.traerInfoAsic();
+    this.traerInfoUsers(); this.traerInfoAsic(); this.traerInfoRig();
   }
   
   mostrarInfoUsers = (data) => {
@@ -79,6 +79,7 @@ class App extends Component {
       rigList: data.data,
     });
   };
+
 
   render() {
     return (

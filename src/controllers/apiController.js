@@ -72,7 +72,7 @@ const apiController = {
   listarAsic: function (req, res){
     db.Asic.findAll()
     .then((asics) => {
-        res.status(200).json({ data: asics, status: 200 });
+        res.status(200).json({count: asics.length, data: asics, status: 200 });
       })
       .catch((err) => {
         res.send(err);
@@ -90,7 +90,7 @@ detalleAsic: (req, res) => {
 listarRig: function (req, res){
     db.Rig.findAll()
     .then((rigs) => {
-        res.status(200).json({ data: rigs, status: 200 });
+        res.status(200).json({ count: rigs.length, data: rigs, status: 200 });
       })
       .catch((err) => {
         res.send(err);
