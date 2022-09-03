@@ -21,6 +21,7 @@ class App extends Component {
       asicTotal: 0,
       asicList: [],
       rigList: [],
+      usersList: [],
       lastAsic: {},
       lastRig: {},
     };
