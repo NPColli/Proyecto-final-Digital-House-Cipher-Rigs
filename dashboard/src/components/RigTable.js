@@ -1,9 +1,12 @@
-import UserRow from "./UserRow";
+import Fila from "./RigRow";
 
-function UsersTable(props) {
+function RigTable(props) {
   return (
     <>
-      <h1 className="h3 mb-2 text-gray-800"> All the users in the Database</h1>
+      <h1 className="h3 mb-2 text-gray-800">
+        {" "}
+        All the Rigs in the Database
+      </h1>
 
       <div className="card shadow mb-4">
         <div className="card-body">
@@ -17,14 +20,15 @@ function UsersTable(props) {
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Email</th>
                   <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Especificaciones</th>
                 </tr>
               </thead>
               <tbody>
-                {props.usersList.map((user, i) => (
+                {props.rigList.map((rig, i) => (
                   <tr key={i}>
-                    <UserRow {...user} />
+                    <Fila {...rig} />
                   </tr>
                 ))}
               </tbody>
@@ -36,4 +40,4 @@ function UsersTable(props) {
   );
 }
 
-export default UsersTable;
+export default RigTable;

@@ -1,11 +1,11 @@
-import Fila from "./RigRow";
+import Fila from "./AsicRow";
 
-function ProductsTable(props) {
+function AsicTable(props) {
   return (
     <>
       <h1 className="h3 mb-2 text-gray-800">
         {" "}
-        All the products in the Database
+        All the Asic in the Database
       </h1>
 
       <div className="card shadow mb-4">
@@ -21,14 +21,14 @@ function ProductsTable(props) {
                 <tr>
                   <th>ID</th>
                   <th>Nombre</th>
-                  <th>Categoría</th>
-                  <th>Descripción</th>
+                  <th>Precio</th>
+                  <th>Especificaciones</th>
                 </tr>
               </thead>
               <tbody>
-                {props.productsList.map((product, i) => (
+                {props.asicList.map((asic, i) => (
                   <tr key={i}>
-                    <Fila {...product} />
+                    <Fila {...asic} />
                   </tr>
                 ))}
               </tbody>
@@ -40,4 +40,4 @@ function ProductsTable(props) {
   );
 }
 
-export default ProductsTable;
+export default AsicTable;

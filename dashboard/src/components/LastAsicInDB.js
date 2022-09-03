@@ -1,4 +1,4 @@
-import productImage from "../assets/images/product-1659703876087.png";
+import productImage from "../assets/images/group-1660287782962.png";
 import { Link } from "react-router-dom";
 
 function LastAsicInDB(props) {
@@ -26,7 +26,7 @@ function LastAsicInDB(props) {
             <h6>
               <a
                 className="nav-link"
-                href={"http://localhost:3001/asic/detail/" + props.id}
+                href={"http://localhost:3000/asic/" + props.id_asic}
               >
                 <span>Ver detalles...</span>
               </a>

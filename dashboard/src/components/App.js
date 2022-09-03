@@ -6,7 +6,8 @@ import Topbar from "./Topbar";
 import LastAsicInDB from "./LastAsicInDB";
 import LastRigInDB from "./LastRigInDB";
 import UsersTable from "./UsersTable";
-import ProductsTable from "./ProductsTable";
+import AsicTable from "./AsicTable";
+import RigTable from "./RigTable";
 import ContentRowProducts from "./ContentRowProducts";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
@@ -18,6 +19,8 @@ class App extends Component {
       usersTotal: 0,
       rigTotal: 0,
       asicTotal: 0,
+      asicList: [],
+      rigList: [],
       lastAsic: {},
       lastRig: {},
     };
@@ -31,31 +34,23 @@ class App extends Component {
   }
 
   traerInfoUsers() {
-    this.apiCall("http://localhost:3001/api/users", this.mostrarInfoUsers);
+    this.apiCall("http://localhost:3000/api/users", this.mostrarInfoUsers);
   }
   traerInfoRig() {
     this.apiCall(
-      "http://localhost:3001/api/rig",
+      "http://localhost:3000/api/rig",
       this.mostrarInfoRig
     );
     }
     traerInfoAsic() {
       this.apiCall(
-        "http://localhost:3001/api/asic",
+        "http://localhost:3000/api/asic",
         this.mostrarInfoAsic
       );
   }
 
   componentDidMount() {
-    this.traerInfoUsers() ;
-  }
-
-  componentDidMount() {
-    this.traerInfoRig() ;
-  }
-
-  componentDidMount() {
-    this.traerInfoAsic() ;
+    this.traerInfoUsers(), this.traerInfoRig(), this.traerInfoAsic();
   }
   
   mostrarInfoUsers = (data) => {
@@ -71,6 +66,7 @@ class App extends Component {
     this.setState({
       asicTotal: data.count,
       lastAsic: data.data[data.data.length - 1],
+      asicList: data.data,
     });
   };
 
@@ -79,6 +75,7 @@ class App extends Component {
     this.setState({
       rigTotal: data.count,
       lastRig: data.data[data.data.length - 1],
+      rigList: data.data,
     });
   };
 
@@ -119,21 +116,28 @@ class App extends Component {
                   
                   <Route
                     path="/LastRigInDB"
-                    element={<LastRigInDB {...this.state.lastRigInDB} />}
+                    element={<LastRigInDB {...this.state.lastRig} />}
                     exact="true"
                   ></Route>
                   <Route
                     path="/LastAsicInDB"
-                    element={<LastAsicInDB {...this.state.lastAsicInDB} />}
+                    element={<LastAsicInDB {...this.state.lastAsic} />}
                     exact="true"
                   ></Route>
                   <Route
-                    path="/ProductsTable"
+                    path="/AsicTable"
                     element={
-                      <ProductsTable productsList={this.state.productsList} />
+                      <AsicTable asicList={this.state.asicList} />
                     }
                     exact="true"
                   ></Route>
+                  <Route
+                  path="/RigTable"
+                  element={
+                    <RigTable rigList={this.state.rigList} />
+                  }
+                  exact="true"
+                ></Route>
                   <Route
                     path="/UsersTable"
                     element={<UsersTable usersList={this.state.usersList} />}

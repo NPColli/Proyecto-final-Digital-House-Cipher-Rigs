@@ -2,13 +2,13 @@ function RigRow(props) {
   return (
     <>
       <td>
-        <h6>{props.id}</h6>
+        <h6>{props.id_rigs}</h6>
       </td>
       <td>
         <h6>
           <a
             className="nav-link"
-            href={"http://localhost:3000/rig/detail/" + props.id}
+            href={"http://localhost:3000/rigs/" + props.id_rigs}
           >
             <span>{props.titulo}</span>
           </a>

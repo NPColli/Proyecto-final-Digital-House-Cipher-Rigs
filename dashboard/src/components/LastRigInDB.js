@@ -1,4 +1,4 @@
-import productImage from "../assets/images/product-1659703876087.png";
+import productImage from "../assets/images/group-1660773872839.png";
 import { Link } from "react-router-dom";
 
 function LastRigInDB(props) {
@@ -26,7 +26,7 @@ function LastRigInDB(props) {
             <h6>
               <a
                 className="nav-link"
-                href={"http://localhost:3001/rig/detail/" + props.id}
+                href={"http://localhost:3000/rigs/" + props.id}
               >
                 <span>Ver detalles...</span>
               </a>

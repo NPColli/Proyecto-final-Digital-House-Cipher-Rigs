@@ -23,13 +23,13 @@ function Sidebar(props) {
 
       {/* <!-- Nav Item - Dashboard --> */}
       <li className="nav-item active">
-        <Link to="/ProductsTable" exact="true" className="nav-link collapsed">
+        <Link to="/AsicTable" exact="true" className="nav-link collapsed">
           <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Listado de Asic</span>
         </Link>
       </li>
       <li className="nav-item active">
-        <Link to="/ProductsTable" exact="true" className="nav-link collapsed">
+        <Link to="/RigTable" exact="true" className="nav-link collapsed">
           <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Listado de Rigs</span>
         </Link>
@@ -50,20 +50,20 @@ function Sidebar(props) {
       {/* <!-- Nav Item - Pages --> */}
       <li className="nav-item">
         <Link
-          to="/ContentCategories"
+          to="/LastRigInDB"
           exact="true"
           className="nav-link collapsed"
         >
           <i className="fas fa-fw fa-folder"></i>
-          <span>Categorías</span>
+          <span>Último RIG</span>
         </Link>
       </li>
 
       {/* <!-- Nav Item - Charts --> */}
       <li className="nav-item">
-        <Link to="/LastProductInDB" exact="true" className="nav-link">
+        <Link to="/LastAsicInDB" exact="true" className="nav-link">
           <i className="fas fa-fw fa-chart-area"></i>
-          <span>Último lanzamiento</span>
+          <span>Último ASIC</span>
         </Link>
       </li>
 
