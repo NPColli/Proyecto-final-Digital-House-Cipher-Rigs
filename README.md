@@ -57,6 +57,7 @@ http://localhost:3000/
 8- Para utilizar usuarios precargados en el archivo cypherdata.sql ingresar estos datos:
 
 Usuario con permisos de admin: admin@cipher.com, password: Admin123
+
 Usuario común: usuario@cipher.com, password: Testuser123
 
 CÓMO EJECUTAR EL PROYECTO DASHBOARD:
