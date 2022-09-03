@@ -11,3 +11,58 @@ Integrantes:
 * Alan Bruno: Tengo 25 años, soy Lic. en publicidad y actualmente estoy trabajando como Project Manager. Empecé a estudiar programación con la idea de hacer un cambio de carrera. En mi tiempo libre me gusta tocar la guitarra y mirar series y peliculas, además de jugar a los videojuegos.
 
 Trello: https://trello.com/b/mi2O0AIW/cipherrigs
+
+CÓMO EJECUTAR EL PROYECTO CIPHER:
+Precondiciones: Tener instalado en la computadora: VSCode, Xampp y MySql Workbench.
+
+0- Ejecutar Xampp y hacer clic en "start" al servicio "MySql"
+
+![imagen]()
+
+1- Abrir el gestor de base de datos instalado, realizar una nueva conexión:
+
+![imagen]()
+
+2- Abrir un nuevo tab para ingresar queries. Ejecutar los scripts para crear la estructura de la base de datos y el contenido. Los scripts se encuentran en las rutas del proyecto:
+
+grupo_1_CipherRigs/database/cypherrigs.sql
+
+grupo_1_CipherRigs/database/cypherdata.sql
+
+![imagen]()
+
+3- Abrir VSCode. En la carpeta donde se desee descargar el proyecto, realizar clic derecho en "open in integrated terminal".
+
+4- En la ruta del paso anterior, ejecutar el siguiente comando en la terminal y aguardar a que se descargue el proyecto:
+
+git clone https://github.com/albruno-dev/-grupo_1_CipherRigs.git
+
+5- Instalar las dependencias utilizadas en el proyecto. Utilizando la consola, posicionarse en el directorio "/grupo_1_CipherRigs" y ejecutar el siguiente comando:
+
+npm install
+
+![imagen]()
+
+6- Iniciar el servidor ejecutando el comando:
+
+npm start
+
+![imagen]()
+
+7- Para visualizar el proyecto, abrir un browser y en la barra de direcciones ingresar a:
+
+http://localhost:3000/
+
+CÓMO EJECUTAR EL PROYECTO DASHBOARD:
+Precondiciones: Tener ejecutando el proyecto CIPHER (ver sección anterior)
+0- Instalar las dependencias utilizadas en el proyecto dashboard. Utilizando la consola, posicionarse en el directorio "/grupo_1_CipherRigs/dashboard" y ejecutar el comando:
+
+npm install
+
+![imagen]()
+
+1- Para iniciar el servidor ejecutar el comando:
+
+npm start
+
+![imagen]()
